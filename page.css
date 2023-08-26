@@ -1,0 +1,22 @@
+.page-container {
+  width: 100%;
+  display: flex;
+  overflow: auto;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #000000;
+}
+.page-text {
+  color: rgb(255, 255, 255);
+}
+.page-text1 {
+  color: rgb(255, 255, 255);
+  font-size: 250px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.page-text2 {
+  color: rgb(255, 255, 255);
+}
