@@ -1,4 +1,4 @@
-.not-found-container {
+.404-container {
   width: 100%;
   display: flex;
   overflow: auto;
@@ -6,30 +6,17 @@
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  background-color: #000000;
 }
-.not-found-container1 {
-  display: flex;
-  position: relative;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
+.404-text {
+  color: rgb(255, 255, 255);
 }
-.not-found-text1 {
-  color: rgb(38, 38, 38);
-  font-size: 252px;
-  margin-top: -20px;
+.404-text1 {
+  color: rgb(255, 255, 255);
+  font-size: 250px;
   font-weight: 900;
-  margin-bottom: -20px;
-  letter-spacing: -20px;
+  text-transform: uppercase;
 }
-.not-found-container2 {
-  width: 421px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-}
-.not-found-text2 {
-  text-align: center;
-  font-weight: 400;
+.404-text2 {
+  color: rgb(255, 255, 255);
 }
