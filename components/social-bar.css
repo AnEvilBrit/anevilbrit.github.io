@@ -11,8 +11,8 @@
 }
 .social-bar-icon {
   fill: #ffffff;
-  width: var(--dl-size-size-medium);
-  height: var(--dl-size-size-medium);
+  width: 75px;
+  height: 75px;
   margin-right: var(--dl-space-space-sixunits);
   text-decoration: none;
 }
@@ -21,8 +21,8 @@
 }
 .social-bar-icon2 {
   fill: #ffffff;
-  width: var(--dl-size-size-medium);
-  height: var(--dl-size-size-medium);
+  width: 75px;
+  height: 75px;
   margin-right: var(--dl-space-space-sixunits);
   text-decoration: none;
 }
@@ -31,8 +31,8 @@
 }
 .social-bar-icon4 {
   fill: #ffffff;
-  width: var(--dl-size-size-medium);
-  height: var(--dl-size-size-medium);
+  width: 75px;
+  height: 75px;
   text-decoration: none;
 }
 @media(max-width: 767px) {

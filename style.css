@@ -69,7 +69,6 @@
 }
 .teleport-show {
   display: flex !important;
-  transform: none !important;
 }
 .Heading {
   font-size: 32px;
