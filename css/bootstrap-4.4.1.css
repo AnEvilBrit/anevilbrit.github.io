@@ -5244,9 +5244,13 @@ a.badge-dark:focus, a.badge-dark.focus {
 .jumbotron {
     padding: 2rem 1rem;
     margin-bottom: 2rem;
-    background-color: #8B8B8B;
     border-radius: 0.3rem;
     color: #000000;
+    text-shadow: -3px 3px 7.5px #000000;
+    background-image: -webkit-linear-gradient(270deg,rgba(216,216,216,1.00) 0%,rgba(29,29,29,1.00) 100%);
+    background-image: -moz-linear-gradient(270deg,rgba(216,216,216,1.00) 0%,rgba(29,29,29,1.00) 100%);
+    background-image: -o-linear-gradient(270deg,rgba(216,216,216,1.00) 0%,rgba(29,29,29,1.00) 100%);
+    background-image: linear-gradient(180deg,rgba(216,216,216,1.00) 0%,rgba(29,29,29,1.00) 100%);
 }
 
 @media (min-width: 576px) {
