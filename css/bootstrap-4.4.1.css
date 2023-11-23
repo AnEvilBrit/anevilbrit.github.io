@@ -94,6 +94,12 @@ abbr[data-original-title] {
   text-decoration-skip-ink: none;
 }
 
+iframe{
+  margin-bottom: 1rem;
+  font-style: normal;
+  line-height: inherit;
+}
+
 address {
   margin-bottom: 1rem;
   font-style: normal;
