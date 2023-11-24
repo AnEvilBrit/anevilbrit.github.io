@@ -38,7 +38,7 @@
     </nav>
 
     <div class="jumbotron jumbotron-fluid text-center">
-       <h1 class="display-4"><strong>My Portfolio</strong></h1>
+       <h1 class="display-4" id="change"><strong>print("Hello World")</strong></h1>
        <p class="lead">Here you can view all the small projects I have created.</p>
        <hr class="my-4">
        <p class="lead">
@@ -49,7 +49,7 @@
     <div class="container">
        <br>
 	   <h1 class="text-center"><strong> About me:</strong></h1>
-<p class="text-center"> I have 2 years experiance inside UE5 and have a strong understanding of the blueprints. I have used industry standards such bender, Substance Painter and Photoshop. I have also used some other tools such as Qubicle Voxel Editor and much more.</p>
+<p class="text-center"> I have around 2 years experiance inside UE5 and have a strong understanding of the blueprints. I have used industry standards such bender, Substance Painter and Photoshop. I have also used some other tools such as Qubicle Voxel Editor and much more.</p>
        <br>
        <div class="row">
          <div class="col-md-4">
@@ -99,6 +99,22 @@
           </div>
        </div>
     </div>
+	  
+	  <!-- Changes any element with the id "change" after 3000ms has passed -->
+	<script>
+		var timeout;
+		function changeText() {
+		  var elem = document.getElementById("change");
+
+		  elem.innerHTML ='print("Hello World")';
+
+		  clearTimeout(timeout);
+		  timeout = setTimeout(function() {
+			elem.innerHTML = "My Portfolio";
+		  }, 3000);
+		}
+	</script>
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
     <script src="js/jquery-3.4.1.min.js"></script>
 
