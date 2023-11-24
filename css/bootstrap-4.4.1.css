@@ -4335,6 +4335,7 @@ input[type="button"].btn-block {
     padding: 0.5rem 1rem;
     right: 0vmax;
     left: 0vmax;
+    z-index: 2;
 }
 
 .navbar .container,
