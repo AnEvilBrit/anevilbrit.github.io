@@ -549,6 +549,9 @@ pre code {
   margin-right: auto;
   margin-left: auto;
 }
+.hidden {
+    visibility: hidden;
+}
 
 @media (min-width: 576px) {
   .container {
