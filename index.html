@@ -8,7 +8,7 @@
 	<link rel="icon" type="image/x-icon" href="images/Icon/Icon.ico">
     <!-- Bootstrap -->
     <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="css/animate.css"/>
 
   </head>
   <body onload="changeText()">
@@ -112,10 +112,11 @@
 		  var elem = document.getElementById("change");
 
 		  elem.innerHTML ='print("Hello World")';
-
+		  elem.className ="display-4 animate__animated animate__fadeOut";
 		  clearTimeout(timeout);
 		  timeout = setTimeout(function() {
 			elem.innerHTML = "My Portfolio";
+			elem.className ="display-4 animate__animated animate__fadeIn";
 		  }, 3000);
 		}
 	</script>
