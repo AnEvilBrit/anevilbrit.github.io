@@ -6477,7 +6477,7 @@ a.close.disabled {
 }
 
 .carousel {
-  position: relative;
+    position: relative;
 }
 
 .carousel.pointer-event {
