@@ -22,42 +22,37 @@
              <li class="nav-item active">
                 <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a>
              </li>
-				  <li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					  Dropdown link
-					</a>
-					<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-					  <li><a class="dropdown-item" href="#">Action</a></li>
-					  <li><a class="dropdown-item" href="#">Another action</a></li>
-					  <li class="dropdown-submenu">
-						<a class="dropdown-item dropdown-toggle" href="#">Submenu</a>
-						<ul class="dropdown-menu">
-						  <li><a class="dropdown-item" href="#">Submenu action</a></li>
-						  <li><a class="dropdown-item" href="#">Another submenu action</a></li>
-
-
-						  <li class="dropdown-submenu">
-							<a class="dropdown-item dropdown-toggle" href="#">Subsubmenu</a>
-							<ul class="dropdown-menu">
-							  <li><a class="dropdown-item" href="#">Subsubmenu action</a></li>
-							  <li><a class="dropdown-item" href="#">Another subsubmenu action</a></li>
-							</ul>
-						  </li>
-						  <li class="dropdown-submenu">
-							<a class="dropdown-item dropdown-toggle" href="#">Second subsubmenu</a>
-							<ul class="dropdown-menu">
-							  <li><a class="dropdown-item" href="#">Subsubmenu action</a></li>
-							  <li><a class="dropdown-item" href="#">Another subsubmenu action</a></li>
-							</ul>
-						  </li>
-
-
-
-						</ul>
-					  </li>
-					</ul>
-				  </li>
-				</ul>			
+				<div class="dropdown">
+					<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Dropdown </button>
+					<ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
+						<a class="dropdown-item" href="">Mushroom Soup</a>
+						<a class="dropdown-item" href="">Mushroom Soup</a>
+						<li class="dropdown-divider"></li>
+						<li class="dropdown-submenu">
+						  <a  class="dropdown-item" tabindex="-1" href="#">Hover me for more options</a>
+						  <ul class="dropdown-menu">
+							<li class="dropdown-item"><a tabindex="-1" href="#">Second level</a></li>
+							<li class="dropdown-submenu">
+							  <a class="dropdown-item" href="">Mushroom Soup</a>
+							  <ul class="dropdown-menu">
+								  <li class="dropdown-item"><a href="#">3rd level</a></li>
+									<li class="dropdown-submenu"><a class="dropdown-item" href="#">another level</a>
+									<ul class="dropdown-menu">
+										<li class="dropdown-item"><a href="#">4th level</a></li>
+										<li class="dropdown-item"><a href="#">4th level</a></li>
+										<li class="dropdown-item"><a href="#">4th level</a></li>
+									</ul>
+								  </li>
+									<li class="dropdown-item"><a href="#">3rd level</a></li>
+							  </ul>
+							</li>
+							<li class="dropdown-item"><a href="#">Second level</a></li>
+							<li class="dropdown-item"><a href="#">Second level</a></li>
+						  </ul>
+						</li>
+					  </ul>
+			  </div>
+		   </ul>
        </div>
     </nav>
 
@@ -146,8 +141,6 @@
 		  }, 2000);
 		}
 	</script>
-
-	<script src="js/js.js"></script>
 	  
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
     <script src="js/jquery-3.4.1.min.js"></script>
