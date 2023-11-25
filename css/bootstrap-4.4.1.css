@@ -171,7 +171,6 @@ a:not([href]) {
 }
 
 a:not([href]):hover {
-    color: inherit;
     text-decoration: none;
 }
 
@@ -4323,7 +4322,7 @@ input[type="button"].btn-block {
 
 .nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus {
     border-color: #e9ecef #e9ecef #dee2e6;
-    color: #565656;
+    color: #A7A7A7;
 }
 
 .nav-tabs .nav-link.disabled {
