@@ -4878,7 +4878,7 @@ input[type="button"].btn-block {
 .card-header-dark {
     padding: 0.75rem 1.25rem;
     margin-bottom: 0;
-    background-color: rgba(67,67,67,1.00);
+    background-color: rgba(43,43,43,1.00);
     border-bottom: 1px solid rgba(0, 0, 0, 0.125);
     color: #FFFFFF;
 }
