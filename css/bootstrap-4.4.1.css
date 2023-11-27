@@ -8253,7 +8253,8 @@ button.bg-dark:focus {
 
 .mb-0,
 .my-0 {
-  margin-bottom: 0 !important;
+    margin-bottom: 0 !important;
+    color: #FFFFFF;
 }
 
 .ml-0,
