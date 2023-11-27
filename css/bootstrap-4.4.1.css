@@ -5229,6 +5229,10 @@ a.badge-secondary:focus, a.badge-secondary.focus {
   color: #fff;
   background-color: #28a745;
 }
+.badge-substance {
+    color: #99e83f;
+    background-color: #1e3101;
+}
 
 a.badge-success:hover, a.badge-success:focus {
   color: #fff;
