@@ -5191,6 +5191,10 @@ a.badge:hover, a.badge:focus {
   color: #fff;
   background-color: #007bff;
 }
+.badge-javascript {
+    color: #fff;
+    background-color: #e4a126;
+}
 .badge-photoshop {
     color: #31a8ff;
     background-color: #001e36;
@@ -5240,6 +5244,10 @@ a.badge-success:focus, a.badge-success.focus {
   color: #fff;
   background-color: #17a2b8;
 }
+.badge-dreamweaver {
+    color: #ff61f6;
+    background-color: #470137;
+}
 
 a.badge-info:hover, a.badge-info:focus {
   color: #fff;
@@ -5258,6 +5266,10 @@ a.badge-info:focus, a.badge-info.focus {
 .badge-blender {
     color: #FFFFFF;
     background-color: #ff881c;
+}
+.badge-css {
+    color: #FFFFFF;
+    background-color: #1572b7;
 }
 
 a.badge-warning:hover, a.badge-warning:focus {
@@ -5303,6 +5315,10 @@ a.badge-light:focus, a.badge-light.focus {
 .badge-dark {
   color: #fff;
   background-color: #343a40;
+}
+.badge-html {
+    color: #fff;
+    background-color: #e44d26;
 }
 .badge-ue5 {
     color: #fff;
