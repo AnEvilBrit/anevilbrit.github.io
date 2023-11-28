@@ -5356,6 +5356,14 @@ a.badge-light:focus, a.badge-light.focus {
     color: #fff;
     background-color: #000000;
 }
+.badge-qubicle {
+    color: #ffffff;
+    background-color: #e54a69;
+}
+.badge-asprite {
+    color: #ffffff;
+    background-color: #584854;
+}
 
 a.badge-dark:hover, a.badge-dark:focus {
   color: #fff;
