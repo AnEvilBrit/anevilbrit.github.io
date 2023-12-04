@@ -2574,6 +2574,7 @@ fieldset:disabled a.btn {
     background-size: 32px 32px;
     width: 32px;
     height: 32px;
+    background-repeat: no-repeat;
 }
 .btn-x {
     color: #fff;
@@ -2581,6 +2582,7 @@ fieldset:disabled a.btn {
     background-size: 32px 32px;
     width: 32px;
     height: 32px;
+    background-repeat: no-repeat;
 }
 .btn-itch {
     color: #fff;
@@ -2588,6 +2590,7 @@ fieldset:disabled a.btn {
     background-size: 32px 32px;
     width: 32px;
     height: 32px;
+    background-repeat: no-repeat;
 }
 
 .btn-primary:hover {
@@ -2605,6 +2608,7 @@ fieldset:disabled a.btn {
     width: 32px;
     height: 32px;
     border-color: #FF0004;
+    background-repeat: no-repeat;
 }
 .btn-x:hover {
     color: #fff;
@@ -2616,6 +2620,7 @@ fieldset:disabled a.btn {
     width: 32px;
     height: 32px;
     border-color: #00EBFF;
+    background-repeat: no-repeat;
 }
 .btn-itch:hover {
     color: #fff;
@@ -2627,6 +2632,7 @@ fieldset:disabled a.btn {
     width: 32px;
     height: 32px;
     border-color: #B8494B;
+    background-repeat: no-repeat;
 }
 
 .btn-primary:focus, .btn-primary.focus {
