@@ -2566,7 +2566,6 @@ fieldset:disabled a.btn {
 .btn-primary {
     color: #fff;
     background-color: #0063CF;
-    border-color: #007bff;
 }
 .btn-youtube {
     color: #fff;
@@ -2597,9 +2596,8 @@ fieldset:disabled a.btn {
 }
 
 .btn-primary:hover {
-  color: #fff;
-  background-color: #0069d9;
-  border-color: #0062cc;
+    color: #fff;
+    background-color: #004a9c;
 }
 .btn-youtube:hover {
     color: #fff;
