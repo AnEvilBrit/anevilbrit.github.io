@@ -2568,11 +2568,24 @@ fieldset:disabled a.btn {
     background-color: #0063CF;
     border-color: #007bff;
 }
+.btn-youtube {
+    color: #fff;
+    background-image: url(../images/Cover/Machu%20Picchu%20Cover.png);
+    background-size: 64px 64px;
+}
 
 .btn-primary:hover {
   color: #fff;
   background-color: #0069d9;
   border-color: #0062cc;
+}
+.btn-youtube:hover {
+    color: #fff;
+    background-color: #1A1A1A;
+    background-image: url(../images/Cover/Machu%20Picchu%20Cover.png);
+    background-size: 64px 64px;
+    -webkit-box-shadow: -2.5px 2.5px 2px #000000;
+    box-shadow: -2.5px 2.5px 2px #000000;
 }
 
 .btn-primary:focus, .btn-primary.focus {
