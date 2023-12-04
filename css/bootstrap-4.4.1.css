@@ -2572,6 +2572,8 @@ fieldset:disabled a.btn {
     color: #fff;
     background-image: url(../images/Cover/Machu%20Picchu%20Cover.png);
     background-size: 64px 64px;
+    width: 64px;
+    height: 64px;
 }
 
 .btn-primary:hover {
@@ -2581,11 +2583,13 @@ fieldset:disabled a.btn {
 }
 .btn-youtube:hover {
     color: #fff;
-    background-color: #1A1A1A;
-    background-image: url(../images/Cover/Machu%20Picchu%20Cover.png);
     background-size: 64px 64px;
     -webkit-box-shadow: -2.5px 2.5px 2px #000000;
     box-shadow: -2.5px 2.5px 2px #000000;
+    opacity: 0.5;
+    background-image: url(../images/Cover/Machu%20Picchu%20Cover.png);
+    width: 64px;
+    height: 64px;
 }
 
 .btn-primary:focus, .btn-primary.focus {
