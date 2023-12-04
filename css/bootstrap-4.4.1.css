@@ -2644,6 +2644,27 @@ fieldset:disabled a.btn {
   border-color: #0062cc;
   box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
 }
+.btn-youtube:focus, .btn-youtube.focus {
+    color: #fff;
+    box-shadow: 0 0 0 0.2rem rgba(255,0,0,0.50);
+    border-color: #FF0004;
+    background-repeat: no-repeat;
+    -webkit-box-shadow: 0 0 0 0.2rem rgba(255,0,0,0.50);
+}
+.btn-x:focus, .btn-x.focus {
+    color: #fff;
+    box-shadow: 0 0 0 0.2rem rgba(0,235,255,0.51);
+    background-repeat: no-repeat;
+    -webkit-box-shadow: 0 0 0 0.2rem rgba(0,235,255,0.51);
+    border-color: #00EBFF;
+}
+.btn-itch:focus, .btn-itch.focus {
+    color: #fff;
+    box-shadow: 0 0 0 0.2rem rgba(184,73,75,0.51);
+    background-repeat: no-repeat;
+    -webkit-box-shadow: 0 0 0 0.2rem rgba(184,73,75,0.51);
+    border-color: #B8494B;
+}
 
 .btn-primary.disabled, .btn-primary:disabled {
   color: #fff;
