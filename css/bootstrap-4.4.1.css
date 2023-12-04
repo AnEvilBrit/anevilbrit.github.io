@@ -2570,10 +2570,24 @@ fieldset:disabled a.btn {
 }
 .btn-youtube {
     color: #fff;
-    background-image: url(../images/Cover/Machu%20Picchu%20Cover.png);
-    background-size: 64px 64px;
-    width: 64px;
-    height: 64px;
+    background-image: url(../images/SVG/Youtube.svg);
+    background-size: 32px 32px;
+    width: 32px;
+    height: 32px;
+}
+.btn-x {
+    color: #fff;
+    background-image: url(../images/SVG/X.svg);
+    background-size: 32px 32px;
+    width: 32px;
+    height: 32px;
+}
+.btn-itch {
+    color: #fff;
+    background-image: url(../images/SVG/Itch.svg);
+    background-size: 32px 32px;
+    width: 32px;
+    height: 32px;
 }
 
 .btn-primary:hover {
@@ -2583,13 +2597,36 @@ fieldset:disabled a.btn {
 }
 .btn-youtube:hover {
     color: #fff;
-    background-size: 64px 64px;
+    background-size: 32px 32px;
     -webkit-box-shadow: -2.5px 2.5px 2px #000000;
     box-shadow: -2.5px 2.5px 2px #000000;
     opacity: 0.5;
-    background-image: url(../images/Cover/Machu%20Picchu%20Cover.png);
-    width: 64px;
-    height: 64px;
+    background-image: url(../images/SVG/Youtube.svg);
+    width: 32px;
+    height: 32px;
+    border-color: #FF0004;
+}
+.btn-x:hover {
+    color: #fff;
+    background-size: 32px 32px;
+    -webkit-box-shadow: -2.5px 2.5px 2px #000000;
+    box-shadow: -2.5px 2.5px 2px #000000;
+    opacity: 0.5;
+    background-image: url(../images/SVG/X.svg);
+    width: 32px;
+    height: 32px;
+    border-color: #00EBFF;
+}
+.btn-itch:hover {
+    color: #fff;
+    background-size: 32px 32px;
+    -webkit-box-shadow: -2.5px 2.5px 2px #000000;
+    box-shadow: -2.5px 2.5px 2px #000000;
+    opacity: 0.5;
+    background-image: url(../images/SVG/Itch.svg);
+    width: 32px;
+    height: 32px;
+    border-color: #B8494B;
 }
 
 .btn-primary:focus, .btn-primary.focus {
