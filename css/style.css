@@ -1,13 +1,16 @@
 .lightrope {
-  text-align: center;
-  white-space: nowrap;
-  overflow: hidden;
-  position: absolute;
-  z-index: 1;
-  margin: -15px 0 0 0;
-  padding: 0;
-  pointer-events: none;
-  width: 100%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    position: absolute;
+    z-index: 1;
+    margin-top: -38px;
+    margin-right: 0;
+    margin-left: -14px;
+    margin-bottom: 0;
+    padding: 0;
+    pointer-events: none;
+    width: 100%;
 }
 .lightrope li {
   position: relative;
