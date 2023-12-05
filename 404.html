@@ -10,6 +10,8 @@
 		<!-- Bootstrap -->
 		<link href="css/bootstrap-4.4.1.css" rel="stylesheet">
 		
+		<link rel="stylesheet" href="css/style.css"/>
+		
 		<style>
 			/* width */
 			::-webkit-scrollbar {
@@ -42,10 +44,50 @@
 			<li class="nav-item"> <a class="nav-link" href="AboutMe">About Me</a> </li>
 			<li class="nav-item"> <a class="nav-link active" href="">404</a> </li>
 		</ul>
-		<br>
-		<br>
-		<br>
-		<div class="jumbotron jumbotron-fluid text-center">
+		<div class="jumbotronv2 jumbotron-fluid text-center">
+			<ul class="lightrope">
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			<br>
+			<br>
+			<br>
 			<h1 class="display-4">404</h1>
 			<hr class="my-4">
 			<p class="lead">This page does not exist - stop snooping around</p>
@@ -80,5 +122,26 @@
 		<!-- Include all compiled plugins (below), or include individual files as needed --> 
 		<script src="js/popper.min.js"></script>
 		<script src="js/bootstrap-4.4.1.js"></script>
+		
+		<script src="js/snowfall.js"></script>
+		<script>
+			let snowfall = new Snowfall({
+				// number of snowflakes
+				count: 250,
+				// min/max size
+				minRadius: 10,
+				maxRadius: 15,
+				// min/max speed
+				minSpeed: 1,
+				maxSpeed: 1.5,
+				// custom symbol or text for snowflakes
+				text: "\u2744", 
+				// color of snowflakes
+				color: "#ffffff",
+				// z-index for the canvas
+				zIndex: "-1" 
+			});
+		</script>
+		
 	</body>
 </html>

@@ -5302,6 +5302,10 @@ a.badge:hover, a.badge:focus {
     color: #fff;
     background-color: #e4a126;
 }
+.badge-sass {
+    color: #fff;
+    background-color: #e4a126;
+}
 .badge-python {
     color: #ffd441;
     background-color: #3b77a8;
