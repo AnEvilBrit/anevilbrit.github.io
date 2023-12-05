@@ -10,8 +10,6 @@
 		<!-- Bootstrap -->
 		<link href="css/bootstrap-4.4.1.css" rel="stylesheet">
 		
-		<link href="css/snowflake.scss" rel="stylesheet">
-		
 		<style>
 			/* width */
 			::-webkit-scrollbar {
@@ -68,7 +66,6 @@
 			<br/>
 			<br/>
 			<br>
-			<div class="snow"></div>
 			<hr>
 			<div class="row">
 				<div class="text-center col-lg-6 offset-lg-3">
@@ -83,5 +80,19 @@
 		<!-- Include all compiled plugins (below), or include individual files as needed --> 
 		<script src="js/popper.min.js"></script>
 		<script src="js/bootstrap-4.4.1.js"></script>
+		
+		<script src="snowfall.js"></script>
+		<script>
+			let snowfall = new Snowfall({
+				count: 150, // number of snowflakes
+				minRadius: 10, // minimum radius of a snowflake in pixels
+				maxRadius: 30, // maximum radius of a snowflake in pixels
+				minSpeed: 3, // minimum speed of a snowflake in pixels per frame
+				maxSpeed: 10, // maximum speed of a snowflake in pixels per frame
+				text: "\u2744", // text for a snowflake (can be any symbol or text)
+				color: "#ffffff", // color of a snowflake in HEX format
+				zIndex: "1000" // z-index for the snowflakes canvas
+			});
+		</script>
 	</body>
 </html>
