@@ -5484,14 +5484,14 @@ a.badge-dark:focus, a.badge-dark.focus {
     padding-top: 4rem;
     padding-right: 2rem;
     padding-left: 2rem;
-    padding-bottom: 57px;
+    padding-bottom: 54px;
     z-index: -2;
   }
 .jumbotronv2 {
     padding-top: 4rem;
     padding-right: 2rem;
     padding-left: 2rem;
-    padding-bottom: 54px;
+    padding-bottom: 75px;
     z-index: -2;
   }
 
