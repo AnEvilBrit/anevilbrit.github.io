@@ -208,9 +208,11 @@
 		<script src="js/snowfall.js"></script>
 		
 		<script type="text/javascript" defer>
-			jQuery(document).ready(function() {
+			window.onload(
+				jQuery(document).ready(function() {
 			$("time.timeago").timeago();
-			});
+			})
+			);
 		</script>
 		
 		<script>
