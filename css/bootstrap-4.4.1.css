@@ -5490,6 +5490,13 @@ a.badge-dark:focus, a.badge-dark.focus {
     padding-bottom: 54px;
     z-index: -2;
   }
+.jumbotronv2 {
+    padding-top: 4rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    padding-bottom: 54px;
+    z-index: -2;
+  }
 
 .jumbotron-fluid {
     padding-right: 0;
