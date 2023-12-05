@@ -27,18 +27,18 @@ $light-off-opacity: 0.4;
     border-radius: 50%;
     margin: $globe-spacing/2;
     display: inline-block;
-    background: rgba(0,255,0,1);
+    background: #00ff00;
     box-shadow: 0px $globe-height/6 $globe-width*2 $globe-spread rgba(0,255,0,1);
     animation-name: flash-1;
     animation-duration: 2s;
     &:nth-child(2n+1) {
-      background: rgba(0,0,255,1);
+      background: #0000ff;
       box-shadow: 0px $globe-height/6 $globe-width*2 $globe-spread rgba(0,0,255,0.5);
       animation-name: flash-2;
       animation-duration: 0.4s;
     }
     &:nth-child(4n+2) {
-      background: rgba(255,0,0,1);
+      background: #ff0000;
       box-shadow: 0px $globe-height/6 $globe-width*2 $globe-spread rgba(255,0,0,1);
       animation-name: flash-3;
       animation-duration: 1.1s;
