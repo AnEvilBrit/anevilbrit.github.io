@@ -81,16 +81,23 @@
 		<script src="js/popper.min.js"></script>
 		<script src="js/bootstrap-4.4.1.js"></script>
 		
-		<script src="snowfall.js"></script>
+		<script src="js/snowfall.js"></script>
 		<script>
 			let snowfall = new Snowfall({
-				count: 150, // number of snowflakes
-				minRadius: 10, // minimum radius of a snowflake in pixels
-				maxRadius: 30, // maximum radius of a snowflake in pixels
-				minSpeed: 3, // minimum speed of a snowflake in pixels per frame
-				maxSpeed: 10, // maximum speed of a snowflake in pixels per frame
-				text: "\u2744", // text for a snowflake (can be any symbol or text)
-				color: "#ffffff", // color of a snowflake in HEX format
+				// number of snowflakes
+				count: 250,
+				// min/max size
+				minRadius: 10,
+				maxRadius: 15,
+				// min/max speed
+				minSpeed: 1,
+				maxSpeed: 3,
+				// custom symbol or text for snowflakes
+				text: "\u2744", 
+				// color of snowflakes
+				color: "#ffffff",
+				// z-index for the canvas
+				zIndex: "-1" 
 			});
 		</script>
 	</body>
