@@ -6,11 +6,12 @@
 
 .snow {
   $total: 200;
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  background: white;
-  border-radius: 50%;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 50%;
+
 
   @for $i from 1 through $total {
     $random-x: random(1000000) * 0.0001vw;
@@ -38,5 +39,6 @@
         transform: translate($random-x-end-yoyo, 100vh) scale($random-scale);
       }
     }
+;     float: none;
   }
 }
