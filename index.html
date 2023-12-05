@@ -62,7 +62,7 @@
 			<br>
 			<h1 class="display-4" id="change"><strong>print("My Portfolio")</strong></h1>
 			<p class="lead">Shirwan S</p>
-			<p>Here you can view all the small projects and items I have created. (Updated as of <time class="timeago" datetime="2023-12-05T01:00:00Z">Time Not Loaded!</time>)</p>
+			<p>Here you can view all the small projects and items I have created. (Updated as of <time class="timeago" datetime="2023-12-05T01:20:00Z">Time Not Loaded!</time>)</p>
 			<hr>
 			<a href="https://www.youtube.com/@AnEvilBrit" class="btn btn-youtube"></a> &middot; <a href="https://twitter.com/AnEvilBrit" class="btn btn-x"></a> &middot; <a href="https://anevilbrit.itch.io/" class="btn btn-itch"></a>
 		</div>
@@ -150,6 +150,24 @@
 		<!-- Include all compiled plugins (below), or include individual files as needed --> 
 		<script src="js/popper.min.js"></script>
 		<script src="js/bootstrap-4.4.1.js"></script>		
-
+		<script src="js/snowfall.js"></script>
+		<script>
+			let snowfall = new Snowfall({
+				// number of snowflakes
+				count: 250,
+				// min/max size
+				minRadius: 10,
+				maxRadius: 15,
+				// min/max speed
+				minSpeed: 1,
+				maxSpeed: 3,
+				// custom symbol or text for snowflakes
+				text: "\u2744", 
+				// color of snowflakes
+				color: "#ffffff",
+				// z-index for the canvas
+				zIndex: "-1" 
+			});
+		</script>
 	</body>
 </html>

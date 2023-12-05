@@ -5470,6 +5470,8 @@ a.badge-dark:focus, a.badge-dark.focus {
     color: #FFFFFF;
     text-shadow: 0px 0px;
     background-color: #222222;
+    opacity: 1;
+    z-index: -2;
 }
 
 @media (min-width: 576px) {
@@ -5478,6 +5480,7 @@ a.badge-dark:focus, a.badge-dark.focus {
     padding-right: 2rem;
     padding-left: 2rem;
     padding-bottom: 75px;
+    z-index: -2;
   }
 }
 .jumbotronindex {
@@ -5485,12 +5488,14 @@ a.badge-dark:focus, a.badge-dark.focus {
     padding-right: 2rem;
     padding-left: 2rem;
     padding-bottom: 54px;
+    z-index: -2;
   }
 
 .jumbotron-fluid {
-  padding-right: 0;
-  padding-left: 0;
-  border-radius: 0;
+    padding-right: 0;
+    padding-left: 0;
+    border-radius: 0;
+    z-index: -2;
 }
 
 .alert {
