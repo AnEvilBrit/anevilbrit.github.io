@@ -44,7 +44,7 @@
 		<br>
 		<br>
 		<br>
-		<div class="jumbotron jumbotron-fluid text-center">
+		<div class="jumbotronv2 jumbotron-fluid text-center">
 			<h1 class="display-4"><strong>Misc</strong></h1>
 			<hr class="my-4">
 			<p>Here is where I have my projects that don't fit in the set catogories</p>
@@ -105,5 +105,26 @@
 		<!-- Include all compiled plugins (below), or include individual files as needed --> 
 		<script src="js/popper.min.js"></script>
 		<script src="js/bootstrap-4.4.1.js"></script>
+		
+		<script src="js/snowfall.js"></script>
+		
+		<script>
+			let snowfall = new Snowfall({
+				// number of snowflakes
+				count: 350,
+				// min/max size
+				minRadius: 5,
+				maxRadius: 15,
+				// min/max speed
+				minSpeed: 0.5,
+				maxSpeed: 1,
+				// custom symbol or text for snowflakes ❄ ❅ ❆
+				text: "❄",
+				// color of snowflakes
+				color: "#ffffff",
+				// z-index for the canvas
+				zIndex: "-1" 
+			});
+		</script>
 	</body>
 </html>
