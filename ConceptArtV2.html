@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Concept Art | Portfolio</title>
+		<link rel="icon" type="image/x-icon" href="images/Icon/Icon.ico">
+		
+		<!-- Bootstrap -->
+		<link href="css/bootstrap.css" rel="stylesheet">
+		
+		<style>
+			/* width */
+			::-webkit-scrollbar {
+			  width: 5px;
+			}
+
+			/* Track */
+			::-webkit-scrollbar-track {
+			  background: #222222; 
+			}
+
+			/* Handle */
+			::-webkit-scrollbar-thumb {
+			  background: #0063cf; 
+			}
+
+			/* Handle on hover */
+			::-webkit-scrollbar-thumb:hover {
+			  background: #004a9c; 
+			}
+		</style>
+	</head>
+	<body>
+		<ul class="nav nav-tabs">
+			<li class="nav-item"> <a class="nav-link" href="/">Home</a> </li>
+			<li class="nav-item"> <a class="nav-link" href="/GameProjects">Game Projects</a> </li>
+			<li class="nav-item"> <a class="nav-link" href="/3D">3D</a> </li>		
+			<li class="nav-item"> <a class="nav-link active" href="/ConceptArt">Concept Art</a> </li>
+			<li class="nav-item"> <a class="nav-link" href="/Misc">Misc</a> </li>
+			<li class="nav-item"> <a class="nav-link" href="/AboutMe">About Me</a> </li>
+		</ul>	
+		<br>
+		<div class="container">
+			<div class="jumbotronv2 jumbotron-fluid text-center">
+				<br>
+				<br>
+				<br>
+				<h1 class="display-4">Concept Art</h1>
+				<hr class="my-4">
+				<p>Some concpent art I have made, not all concept art is here</p>
+				<hr class="my-4">
+			</div>
+			<div class="text-center">
+				<div id="carouselExampleIndicators1" class="carousel slide" data-ride="carousel" style="background-color: 22222">
+					<ol class="carousel-indicators">
+						<li data-target="#carouselExampleIndicators1" data-slide-to="0" class="active"></li>
+						<li data-target="#carouselExampleIndicators1" data-slide-to="1"></li>
+						<li data-target="#carouselExampleIndicators1" data-slide-to="2"></li>
+					</ol>
+					<div class="carousel-inner" role="listbox">
+						<div class="carousel-item active"> <img class="d-block mx-auto" src="images/Concept Art/Mushroom Soup Concept Art.png" alt="First slide">
+							<div class="carousel-caption">
+								<h5 class="dark">Mushroom Soup Concept Art</h5>
+								<p class="dark">This was done for a game jam</p>
+							</div>
+						</div>
+						<div class="carousel-item"> <img class="d-block mx-auto" src="images/Concept Art/Placeholder Concept Art.png" alt="Second slide">
+							<div class="carousel-caption">
+								<h5>Second slide Heading</h5>
+								<p>Second slide Caption</p>
+							</div>
+						</div>
+						<div class="carousel-item"> <img class="d-block mx-auto" src="images/Concept Art/Placeholder Concept Art.png" alt="Third slide">
+							<div class="carousel-caption">
+								<h5>Third slide Heading</h5>
+								<p>Third slide Caption</p>
+							</div>
+						</div>
+					</div>
+					<a class="carousel-control-prev" href="#carouselExampleIndicators1" role="button" data-slide="prev"> 
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span> 
+						<span class="sr-only">Previous</span> 
+					</a> 
+					<a class="carousel-control-next" href="#carouselExampleIndicators1" role="button" data-slide="next"> 
+						<span class="carousel-control-next-icon" aria-hidden="true"></span> 
+						<span class="sr-only">Next</span> 
+					</a> 
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="text-center col-lg-6 offset-lg-3">
+					<p>Copyright &copy; 2023 &middot; All Rights Reserved &middot; <a href="https://www.youtube.com/@AnEvilBrit" class="btn btn-youtube"></a> &middot; <a href="https://twitter.com/AnEvilBrit" class="btn btn-x"></a> &middot; <a href="https://anevilbrit.itch.io/" class="btn btn-itch"></a></p>
+				</div>
+			</div>
+		</div>
+		
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+		<script src="js/jquery-3.4.1.min.js"></script>
+
+		<!-- Include all compiled plugins (below), or include individual files as needed --> 
+		<script src="js/popper.min.js"></script>
+		<script src="js/bootstrap-4.4.1.js"></script>
+		
+		<script src="js/snowfall.js"></script>
+		
+		<script>
+			let snowfall = new Snowfall({
+				// number of snowflakes
+				count: 350,
+				// min/max size
+				minRadius: 5,
+				maxRadius: 15,
+				// min/max speed
+				minSpeed: 0.5,
+				maxSpeed: 1,
+				// custom symbol or text for snowflakes ❄ ❅ ❆
+				text: "❄",
+				// color of snowflakes
+				color: "#ffffff",
+				// z-index for the canvas
+				zIndex: "-1" 
+			});
+		</script>
+	</body>
+</html>
