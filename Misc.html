@@ -33,7 +33,7 @@
 		</style>
 	</head>
 	<body>
-		<ul class="nav nav-tabs">
+		<ul class="nav nav-tabs justify-content-md-center">
 			<li class="nav-item"> <a class="nav-link" href="/">Home</a> </li>
 			<li class="nav-item"> <a class="nav-link" href="/GameProjects">Game Projects</a> </li>
 			<li class="nav-item"> <a class="nav-link" href="/3D">3D</a> </li>	
@@ -89,11 +89,12 @@
 				</div>
 			</div>
 			<hr>
-			<div class="row">
-				<div class="text-center col-lg-6 offset-lg-3">
-					<p>Copyright &copy; 2023 &middot; All Rights Reserved &middot; <a href="https://www.youtube.com/@AnEvilBrit" class="btn btn-youtube"></a> &middot; <a href="https://twitter.com/AnEvilBrit" class="btn btn-x"></a> &middot; <a href="https://anevilbrit.itch.io/" class="btn btn-itch"></a></p>
+			<footer>		
+				<div class="row text-center mx-5">
+						<p><a href="https://www.youtube.com/@AnEvilBrit" class="btn btn-youtube"></a> &middot; <a href="https://twitter.com/AnEvilBrit" class="btn btn-x"></a> &middot; <a href="https://anevilbrit.itch.io/" class="btn btn-itch"></a></p>		
+						<p>Copyright &copy; 2023 &middot; All Rights Reserved</p> 
 				</div>
-			</div>
+			</footer>
 		</div>
 
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
@@ -102,8 +103,6 @@
 		<!-- Include all compiled plugins (below), or include individual files as needed --> 
 		<script src="js/popper.min.js"></script>
 		<script src="js/bootstrap.js"></script>
-		
-		<script src="js/snowfall.js"></script>
 		
 		<script>
 			let snowfall = new Snowfall({
