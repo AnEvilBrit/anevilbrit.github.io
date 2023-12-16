@@ -39,6 +39,7 @@
   --bs-dark: #212529;
   --bs-primary-rgb: 13, 110, 253;
   --bs-ue5-rgb: 0, 0, 0;
+  --bs-photoshop-rgb: 0, 30, 54;
   --bs-secondary-rgb: 108, 117, 125;
   --bs-success-rgb: 25, 135, 84;
   --bs-info-rgb: 13, 202, 240;
@@ -6919,6 +6920,11 @@ textarea.form-control-lg {
 .text-bg-ue5 {
   color: #fff !important;
   background-color: RGBA(var(--bs-ue5-rgb), var(--bs-bg-opacity, 1)) !important;
+}
+
+.text-bg-photoshop {
+  color: #31a8ff !important;
+  background-color: RGBA(var(--bs-photoshop-rgb), var(--bs-bg-opacity, 1)) !important;
 }
 
 .text-bg-secondary {
