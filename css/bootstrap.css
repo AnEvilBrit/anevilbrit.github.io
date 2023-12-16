@@ -40,6 +40,17 @@
   --bs-primary-rgb: 13, 110, 253;
   --bs-ue5-rgb: 0, 0, 0;
   --bs-photoshop-rgb: 0, 30, 54;
+  --bs-asprite-rgb: 88, 72, 84;
+  --bs-blender-rgb: 255, 136, 28;
+  --bs-qubicle-rgb: 229, 74, 105;
+  --bs-vscode-rgb: 37, 177, 243;
+  --bs-dreamweaver-rgb: 71, 1, 55;
+  --bs-substance-rgb: 30, 49, 1;
+  --bs-html-rgb: 225, 75, 37;
+  --bs-javascript-rgb: 226, 161, 36;
+  --bs-sass-rgb: 188, 94, 138;
+  --bs-css-rgb: 1, 109, 183;
+  --bs-python-rgb: 65, 127, 177;
   --bs-secondary-rgb: 108, 117, 125;
   --bs-success-rgb: 25, 135, 84;
   --bs-info-rgb: 13, 202, 240;
@@ -6925,6 +6936,61 @@ textarea.form-control-lg {
 .text-bg-photoshop {
   color: #31a8ff !important;
   background-color: RGBA(var(--bs-photoshop-rgb), var(--bs-bg-opacity, 1)) !important;
+}
+
+.text-bg-asprite {
+  color: #fff !important;
+  background-color: RGBA(var(--bs-asprite-rgb), var(--bs-bg-opacity, 1)) !important;
+}
+
+.text-bg-blender {
+  color: #fff !important;
+  background-color: RGBA(var(--bs-blender-rgb), var(--bs-bg-opacity, 1)) !important;
+}
+
+.text-bg-qubicle {
+  color: #202020 !important;
+  background-color: RGBA(var(--bs-qubicle-rgb), var(--bs-bg-opacity, 1)) !important;
+}
+
+.text-bg-vscode {
+  color: #fff !important;
+  background-color: RGBA(var(--bs-vscode-rgb), var(--bs-bg-opacity, 1)) !important;
+}
+
+.text-bg-dreamweaver {
+  color: #ff61f6 !important;
+  background-color: RGBA(var(--bs-dreamweaver-rgb), var(--bs-bg-opacity, 1)) !important;
+}
+
+.text-bg-substance {
+  color: #99e83f !important;
+  background-color: RGBA(var(--bs-substance-rgb), var(--bs-bg-opacity, 1)) !important;
+}
+
+.text-bg-html {
+  color: #fff !important;
+  background-color: RGBA(var(--bs-html-rgb), var(--bs-bg-opacity, 1)) !important;
+}
+
+.text-bg-javascript {
+  color: #fff !important;
+  background-color: RGBA(var(--bs-javascript-rgb), var(--bs-bg-opacity, 1)) !important;
+}
+
+.text-bg-sass {
+  color: #fff !important;
+  background-color: RGBA(var(--bs-sass-rgb), var(--bs-bg-opacity, 1)) !important;
+}
+
+.text-bg-css {
+  color: #fff !important;
+  background-color: RGBA(var(--bs-css-rgb), var(--bs-bg-opacity, 1)) !important;
+}
+
+.text-bg-python {
+  color: #ffd650 !important;
+  background-color: RGBA(var(--bs-python-rgb), var(--bs-bg-opacity, 1)) !important;
 }
 
 .text-bg-secondary {
