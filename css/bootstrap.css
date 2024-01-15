@@ -4482,6 +4482,11 @@ textarea.form-control-lg {
 .card:hover{
   transform: scale(100%);
   z-index: 1000;
+  transition-property: border-width;
+  transition: 1s;
+  border-radius: 10px;
+  border-width: 5px;
+  border-color: #0063cf;
 }
 
 .card > hr {
