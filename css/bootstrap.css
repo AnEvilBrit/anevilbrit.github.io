@@ -48,7 +48,6 @@
   --bs-substance-rgb: 30, 49, 1;
   --bs-html-rgb: 225, 75, 37;
   --bs-javascript-rgb: 226, 161, 36;
-  --bs-sass-rgb: 188, 94, 138;
   --bs-css-rgb: 1, 109, 183;
   --bs-python-rgb: 65, 127, 177;
   --bs-secondary-rgb: 108, 117, 125;
@@ -6988,11 +6987,6 @@ textarea.form-control-lg {
 .text-bg-javascript {
   color: #fff !important;
   background-color: RGBA(var(--bs-javascript-rgb), var(--bs-bg-opacity, 1)) !important;
-}
-
-.text-bg-sass {
-  color: #fff !important;
-  background-color: RGBA(var(--bs-sass-rgb), var(--bs-bg-opacity, 1)) !important;
 }
 
 .text-bg-css {
