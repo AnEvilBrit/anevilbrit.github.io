@@ -3017,7 +3017,7 @@ textarea.form-control-lg {
   border: var(--bs-btn-border-width) solid var(--bs-btn-border-color);
   border-radius: var(--bs-btn-border-radius);
   background-color: var(--bs-btn-bg);
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: transform .25s ease-out;
 }
 @media (prefers-reduced-motion: reduce) {
   .btn {
@@ -3028,6 +3028,7 @@ textarea.form-control-lg {
   color: var(--bs-btn-hover-color);
   background-color: var(--bs-btn-hover-bg);
   border-color: var(--bs-btn-hover-border-color);
+  transform: scale(1.15);
 }
 .btn-check + .btn:hover {
   color: var(--bs-btn-color);
@@ -4475,14 +4476,14 @@ textarea.form-control-lg {
   background-clip: border-box;
   border: var(--bs-card-border-width) solid var(--bs-card-border-color);
   border-radius: var(--bs-card-border-radius);
-  transform: scale(85%);
+  transform: scale(.85);
+  transition: transform 1s ease-out;
 }
 
 .card:hover{
-  transform: scale(100%);
-  z-index: 1000;
-  transition-property: border-width;
+  transform: scale(1);
   transition: 1s;
+  z-index: 1000;
   border-radius: 10px;
   border-width: 5px;
   border-color: #0063cf;
