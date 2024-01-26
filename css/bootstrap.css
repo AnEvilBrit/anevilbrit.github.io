@@ -3914,7 +3914,7 @@ textarea.form-control-lg {
   }
 }
 .nav-link:hover, .nav-link:focus {
-  color: var(--bs-nav-link-hover-color);
+  color: darkgrey;
 }
 .nav-link:focus-visible {
   outline: 0;
@@ -3941,6 +3941,7 @@ textarea.form-control-lg {
   border: var(--bs-nav-tabs-border-width) solid transparent;
   border-top-left-radius: var(--bs-nav-tabs-border-radius);
   border-top-right-radius: var(--bs-nav-tabs-border-radius);
+  border-width: 2.5px;
 }
 .nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus {
   isolation: isolate;
