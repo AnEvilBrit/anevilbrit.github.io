@@ -3022,7 +3022,7 @@ textarea.form-control-lg {
   border: var(--bs-btn-border-width) solid var(--bs-btn-border-color);
   border-radius: var(--bs-btn-border-radius);
   background-color: var(--bs-btn-bg);
-  transition: transform .25s ease-out;
+  transition: .25s ease-out;
 }
 @media (prefers-reduced-motion: reduce) {
   .btn {
@@ -3101,6 +3101,7 @@ textarea.form-control-lg {
     background-image: url(../images/SVG/Youtube.svg);
     width: 32px;
     height: 32px;
+    background-position: center;
     background-repeat: no-repeat;
 }
 
@@ -3120,6 +3121,7 @@ textarea.form-control-lg {
     background-image: url(../images/SVG/X.svg);
     width: 32px;
     height: 32px;
+    background-position: center;
     background-repeat: no-repeat;
 }
 
@@ -3139,6 +3141,7 @@ textarea.form-control-lg {
     background-image: url(../images/SVG/Itch.svg);
     width: 32px;
     height: 32px;
+    background-position: center;
     background-repeat: no-repeat;
 }
 
@@ -4483,7 +4486,7 @@ textarea.form-control-lg {
   border: var(--bs-card-border-width) solid var(--bs-card-border-color);
   border-radius: var(--bs-card-border-radius);
   transform: scale(.85);
-  transition: transform 1s ease-out;
+  transition: 1s ease-out;
 }
 
 .card:hover{
