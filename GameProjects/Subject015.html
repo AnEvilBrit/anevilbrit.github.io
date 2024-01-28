@@ -74,8 +74,9 @@
 				<p>Unable to display PDF file. <a href="/pdf/Game Design Document.pdf">View in another tab</a> instead.</p>
 			</object>
 			<hr>
-			<div class="col-lg-6 offset-lg-3">
-				<iframe frameborder="0" src="https://itch.io/embed/2430654?linkback=true&amp;bg_color=222&amp;fg_color=fff&amp;link_color=0063cf" width="100%" height="100%"><a href="https://anevilbrit.itch.io/subject-015">Subject 015 by Evil</a></iframe>
+			<div class="text-center">
+				<img id="itch_icon" src="" height="200">
+				<p><a id="buy_button" class="btn btn-primary">Veiw game on itch!</a></p>
 			</div>
 			<hr>
 			<footer>
@@ -85,6 +86,19 @@
 				</div>
 			</footer>
 		</div>
+		<script type="text/javascript" src="https://static.itch.io/api.js"></script>
+		<script type="text/javascript">
+			Itch.getGameData({
+			  user: "shirwan",
+			  game: "subject-015",
+			  onComplete: function(data) {
+				var a = document.getElementById("buy_button")
+				a.href = data.links.self
+				var i = document.getElementById("itch_icon")
+				i.src = data.cover_image
+			  }
+			})
+		</script>
 		<script src="../js/jquery.js"></script>
 		<script src="../js/bootstrap.js"></script>
 	</body>
