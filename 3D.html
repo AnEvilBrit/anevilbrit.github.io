@@ -43,11 +43,17 @@
 				<h1 class="display-4"><strong>3D</strong></h1>
 				<hr class="my-4">
 				<p>This is where most of my 3D work is shown off</p>
+				<div id="myBtnContainer">
+					<a class="btn btn-filter active" onclick="filterSelection('all')"> Show all</a>
+					<span class="badge text-bg-ue5 btn btn-filter" onclick="filterSelection('UE5')">UE5</span>					
+					<span class="badge text-bg-blender btn btn-filter" onclick="filterSelection('Blender')">Blender</span>
+					<span class="badge text-bg-photoshop btn btn-filter" onclick="filterSelection('Photoshop')">Photoshop</span>					
+				</div>
 				<hr class="my-4">
 			</div>
 			<div class="row justify-content-center text-center">
 				<div class="col-md-4">
-					<div class="card">
+					<div class="card filterDiv Blender Photoshop">
 						<img class="card-img-top" src="images/Cover/Laptop Cover.png" alt="Card image cap">
 						<div class="card-body">
 							<h4 class="card-title">Laptop</h4>
@@ -61,7 +67,7 @@
 					</div>
 				</div>
 				<div class="col-md-4">
-					<div class="card">
+					<div class="card filterDiv UE5 Blender Photoshop">
 						<img class="card-img-top" src="images/Cover/Machu Picchu Cover.png" alt="Card image cap">
 						<div class="card-body">
 							<h4 class="card-title">Machu Picchu Diorama</h4>
@@ -83,6 +89,7 @@
 				</div>
 			</footer>
 		</div>
+		<script src="js/filter.js"></script>
 		<script src="js/jquery.js"></script>
 		<script src="js/bootstrap.js"></script>
 	</body>
