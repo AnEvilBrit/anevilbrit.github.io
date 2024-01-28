@@ -135,8 +135,9 @@
 				</table>
 			</div>
 			<hr>
-			<div class="col-lg-6 offset-lg-3">
-				<iframe frameborder="0" src="https://itch.io/embed/2373955?linkback=true&amp;bg_color=222&amp;fg_color=ffffff&amp;link_color=0063cf" width="100%" height="100%"><a href="https://shirwan.itch.io/mushroom-soup">Mushroom Soup by Evil</a></iframe>
+			<div class="text-center bg-body-tertiary rounded-3">
+				<img id="itch_icon" src="" height="200" class="p-4">
+				<a id="buy_button" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Veiw game on itch!</a>
 			</div>
 			<hr>
 			<footer>
@@ -145,6 +146,20 @@
 					<p>Copyright &copy; 2024 &middot; All Rights Reserved</p>
 				</div>
 			</footer>
+		</div>
+		<script type="text/javascript" src="https://static.itch.io/api.js"></script>
+		<script type="text/javascript">
+			Itch.getGameData({
+			  user: "shirwan",
+			  game: "mushroom-soup",
+			  onComplete: function(data) {
+				var a = document.getElementById("buy_button")
+				a.href = data.links.self
+				var i = document.getElementById("itch_icon")
+				i.src = data.cover_image
+			  }
+			})
+		</script>
 		</div>
 		<script src="../js/jquery.js"></script>
 		<script src="../js/bootstrap.js"></script>
