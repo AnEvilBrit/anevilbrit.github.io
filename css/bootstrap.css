@@ -287,11 +287,11 @@ p {
 }
 
 .filterDiv {
-  display: none !important;
+  filter: brightness(50%)
 }
 
 .show {
-  display: flex !important;
+  filter: brightness(100%);
 }
 
 abbr[title] {
