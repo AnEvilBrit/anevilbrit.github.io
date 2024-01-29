@@ -3042,6 +3042,7 @@ textarea.form-control-lg {
   background-color: var(--bs-btn-hover-bg);
   border-color: var(--bs-btn-hover-border-color);
   transform: scale(1.15);
+  filter:brightness(100%)
 }
 .btn-check + .btn:hover {
   color: var(--bs-btn-color);
@@ -3064,6 +3065,7 @@ textarea.form-control-lg {
   color: var(--bs-btn-active-color);
   background-color: var(--bs-btn-active-bg);
   border-color: var(--bs-btn-active-border-color);
+  filter:brightness(100%)
 }
 .btn-check:checked + .btn:focus-visible, :not(.btn-check) + .btn:active:focus-visible, .btn:first-child:active:focus-visible, .btn.active:focus-visible, .btn.show:focus-visible {
   box-shadow: var(--bs-btn-focus-box-shadow);
@@ -3102,6 +3104,7 @@ textarea.form-control-lg {
   --bs-btn-active-border-color: #fff;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   margin: 3px;
+  filter: brightness(50%);
 }
 
 .btn-youtube {
