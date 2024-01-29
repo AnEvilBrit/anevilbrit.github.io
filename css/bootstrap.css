@@ -287,11 +287,12 @@ p {
 }
 
 .filterDiv {
-  filter: brightness(50%)
+  filter: brightness(50%);
 }
 
 .show {
   filter: brightness(100%);
+  transform: scale(.90) !important;
 }
 
 abbr[title] {
@@ -4512,7 +4513,7 @@ textarea.form-control-lg {
 }
 
 .card:hover{
-  transform: scale(1);
+  transform: scale(1) !important;
   transition: 1s;
   z-index: 1000;
   border-radius: 10px;
