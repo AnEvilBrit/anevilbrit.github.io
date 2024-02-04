@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Wanted By The FBI | Portfolio</title>
+		<link rel="icon" type="image/x-icon" href="../images/Icon/Icon.ico">
+		<!-- Bootstrap -->
+		<link href="../css/bootstrap.css" rel="stylesheet">
+		<style>
+			/* width */
+			::-webkit-scrollbar {
+			width: 5px;
+			}
+			/* Track */
+			::-webkit-scrollbar-track {
+			background: #222222; 
+			}
+			/* Handle */
+			::-webkit-scrollbar-thumb {
+			background: #0063cf; 
+			}
+			/* Handle on hover */
+			::-webkit-scrollbar-thumb:hover {
+			background: #004a9c; 
+			}
+		</style>
+	</head>
+	<body>
+		<ul class="nav nav-tabs justify-content-md-center">
+			<li class="nav-item"> <a class="nav-link" href="/">Home</a> </li>
+			<li class="nav-item"> <a class="nav-link" href="/GameProjects">Game Projects</a> </li>
+			<li class="nav-item"> <a class="nav-link" href="/3D">3D</a> </li>
+			<li class="nav-item"> <a class="nav-link" href="/Misc">Misc</a> </li>
+			<li class="nav-item"> <a class="nav-link" href="/AboutMe">About Me</a> </li>
+			<li class="nav-item"> <a class="nav-link active" href="">Wanted By The FBI</a> </li>
+		</ul>
+		<div class="container">
+			<img src="../images/Banner/WBTFBI Banner.png" class="img-fluid" alt="Image" height="400">
+			<hr class="line">
+			<div class="text-center">
+				<span class="badge text-bg-ue5">UE5 - Blueprints</span> <span class="badge text-bg-blender">Blender</span> <span class="badge text-bg-photoshop">Photoshop</span>
+			</div>
+			<br>
+			<div class="text-center">
+				<p class="lead">I created this project in my own free time, I loved learning new things throughout this project.</p>
+			</div>
+			<div class="row text-center">
+				<div class="col-lg-6 offset-lg-3">
+					This small game is a wave-based game where the number of agents increases every few rounds and the game becomes progressively difficult.
+				</div>
+			</div>
+			<hr>
+			<div class="accordion-body">
+				<div class="p-5 text-center bg-body-tertiary rounded-3">
+					<h3><b>Overview</b></h3>
+					<br>
+					<p>I created this game with learning new things in mind. I wanted to learn about post-processing materials, and how to add a weapon to the player by making a simple dynamic weapon system. So I created a wave-based game where you have to fend off the FBI from storming your home, in the art style of a pixel game.</p>
+				</div>
+				<br>
+			</div>
+			<br>
+			<div class="text-center">
+				<div id="carouselExample" class="carousel slide">
+					<div class="carousel-inner">
+					  <div class="carousel-item active">
+						<img src="../images/Concept Art/Placeholder Concept Art.png" class="img-fluid" alt="Concept Art">
+					  </div>
+					  <div class="carousel-item">
+						<img src="../images/Concept Art/Placeholder Concept Art.png" class="img-fluid" alt="Concept Art">
+					  </div>
+					  <div class="carousel-item">
+						<img src="../images/Concept Art/Placeholder Concept Art.png" class="img-fluid" alt="Concept Art">
+					  </div>
+					</div>
+					<button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+					  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					  <span class="visually-hidden">Previous</span>
+					</button>
+					<button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+					  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+					  <span class="visually-hidden">Next</span>
+					</button>
+				  </div>
+			</div>
+			<br>
+			<hr>
+			<div class="text-center bg-body-tertiary rounded-3">
+				<img id="itch_icon" src="" height="200" class="p-4">
+				<a id="buy_button" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Veiw game on itch!</a>
+			</div>
+			<hr>
+			<footer>
+				<div class="row text-center justify-content-md-center">
+					<p><a href="https://www.youtube.com/@AnEvilBrit" class="btn btn-youtube"></a> &middot; <a href="https://twitter.com/AnEvilBrit" class="btn btn-x"></a> &middot; <a href="https://anevilbrit.itch.io/" class="btn btn-itch"></a></p>
+					<p>Copyright &copy; 2024 &middot; All Rights Reserved</p>
+				</div>
+			</footer>
+		</div>
+		<script type="text/javascript" src="https://static.itch.io/api.js"></script>
+		<script type="text/javascript">
+			Itch.getGameData({
+			  user: "shirwan",
+			  game: "wanted-by-the-fbi",
+			  onComplete: function(data) {
+				var a = document.getElementById("buy_button")
+				a.href = data.links.self
+				var i = document.getElementById("itch_icon")
+				i.src = data.cover_image
+			  }
+			})
+		</script>
+		<script src="../js/jquery.js"></script>
+		<script src="../js/bootstrap.js"></script>
+	</body>
+</html>
