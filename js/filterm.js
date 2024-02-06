@@ -1,9 +1,10 @@
-filterSelection("all")
+filterSelectionmultiple("all")
 var filter = [];
 
 function filterSelectionmultiple(e){
   if (e === "all"){
     console.log(e);
+    filter = [];
     return
   }
   if(filter.indexOf(e) === -1) {
@@ -16,15 +17,12 @@ function filterSelectionmultiple(e){
     filter.splice(fil, 1);
     console.log(filter);
   }
-}
-
-function filterSelection(c) {
   var x, i;
   x = document.getElementsByClassName("filterDiv");
-  if (c == "all") c = "";
+  if (e == "all") e = "";
   for (i = 0; i < x.length; i++) {
     RemoveClass(x[i], "show");
-    if (x[i].className.indexOf(c) > -1) AddClass(x[i], "show");
+    if (x[i].className.indexOf(e) > -1) AddClass(x[i], "show");
   }
 }
 
@@ -54,8 +52,9 @@ var btnContainer = document.getElementById("myBtnContainer");
 var btns = btnContainer.getElementsByClassName("btn");
 for (var i = 0; i < btns.length; i++) {
   btns[i].addEventListener("click", function(){
-    var current = btnContainer.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
+    for (var c = 0; c < filter.length; c++) {
+      this.className += " active";
+      console.log(filter[c]);
+    }
   });
 }
