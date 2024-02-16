@@ -26,6 +26,22 @@
 			background: #004a9c; 
 			}
 		</style>
+		<script type="text/javascript" src="https://static.itch.io/api.js"></script>
+		<script type="text/javascript">
+			Itch.getGameData({
+			  user: "shirwan",
+			  game: "subject-015",
+			  onComplete: function(data) {
+				var b = document.getElementById("buy_button")
+				b.href = data.links.self
+				var p = document.getElementById("price")
+				p.innerHTML = data.price
+				var i = document.getElementById("itch_icon")
+				i.src = data.cover_image
+				console.log(data)
+			  }
+			})
+		</script>
 	</head>
 	<body>
 		<ul class="nav nav-tabs justify-content-md-center">
@@ -87,8 +103,14 @@
 			<br>
 			<hr>
 			<div class="text-center bg-body-tertiary rounded-3">
-				<img id="itch_icon" src="" height="200" class="p-4">
-				<a id="buy_button" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Veiw game on itch!</a>
+				<img id="itch_icon" src="" height="200" class="p-2">
+				<div>
+					<a id="buy_button" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Veiw game on itch!</a>
+					<br>
+					<br>
+					<a id="price">Price Loading...</a>
+				</div>
+				<br>
 			</div>
 			<hr>
 			<footer>
@@ -98,19 +120,6 @@
 				</div>
 			</footer>
 		</div>
-		<script type="text/javascript" src="https://static.itch.io/api.js"></script>
-		<script type="text/javascript">
-			Itch.getGameData({
-			  user: "shirwan",
-			  game: "subject-015",
-			  onComplete: function(data) {
-				var a = document.getElementById("buy_button")
-				a.href = data.links.self
-				var i = document.getElementById("itch_icon")
-				i.src = data.cover_image
-			  }
-			})
-		</script>
 		<script src="../js/jquery.js"></script>
 		<script src="../js/bootstrap.js"></script>
 	</body>
