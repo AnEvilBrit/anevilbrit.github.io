@@ -8,40 +8,25 @@
 		<link rel="icon" type="image/x-icon" href="../images/Icon/Icon.ico">
 		<!-- Bootstrap -->
 		<link href="../css/bootstrap.css" rel="stylesheet">
-		<style>
-			/* width */
-			::-webkit-scrollbar {
-			width: 5px;
-			}
-			/* Track */
-			::-webkit-scrollbar-track {
-			background: #222222; 
-			}
-			/* Handle */
-			::-webkit-scrollbar-thumb {
-			background: #0063cf; 
-			}
-			/* Handle on hover */
-			::-webkit-scrollbar-thumb:hover {
-			background: #004a9c; 
-			}
-		</style>
-				<script type="text/javascript" src="https://static.itch.io/api.js"></script>
-				<script type="text/javascript">
-					Itch.getGameData({
-					  user: "shirwan",
-					  game: "mushroom-soup",
-					  onComplete: function(data) {
-						var b = document.getElementById("buy_button")
-						b.href = data.links.self
-						var p = document.getElementById("price")
-						p.innerHTML = data.price
-						var i = document.getElementById("itch_icon")
-						i.src = data.cover_image
-						console.log(data)
-					  }
-					})
-				</script>
+		<!-- Custom CSS -->
+		<link href="../css/custom.css" rel="stylesheet">
+		<!-- Gets game data from itch -->
+		<script type="text/javascript" src="https://static.itch.io/api.js"></script>
+		<script type="text/javascript">
+			Itch.getGameData({
+			  user: "shirwan",
+			  game: "mushroom-soup",
+			  onComplete: function(data) {
+				var b = document.getElementById("buy_button")
+				b.href = data.links.self
+				var p = document.getElementById("price")
+				p.innerHTML = data.price
+				var i = document.getElementById("itch_icon")
+				i.src = data.cover_image
+				console.log(data)
+			  }
+			})
+		</script>
 	</head>
 	<body>
 		<ul class="nav nav-tabs justify-content-md-center">
