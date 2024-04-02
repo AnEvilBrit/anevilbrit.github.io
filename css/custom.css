@@ -43,9 +43,16 @@
 .link{
   animation: opacity 2.5s ease-out;
 }
+
 .link:hover{
   color: #1d76ff;
 }
+
+.link:focus{
+  color: #0f458c !important;
+  border: #ffffff00;
+}
+
 * {box-sizing: border-box}
 
 .skill-container {
