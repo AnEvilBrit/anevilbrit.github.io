@@ -37,7 +37,7 @@
 }
 
 .fade{
-  animation: opacity 2.5s ease-out forwards !important;
+  animation: opacity 1s forwards !important;
 }
 
 .link{
