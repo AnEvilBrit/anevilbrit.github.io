@@ -1,18 +1,42 @@
 @charset "UTF-8";
+
 /*
 * custom.css - https://anevil.github.io/
 * Licensed under the MIT license - http://opensource.org/licenses/MIT
-* Copyright (c) 2024 Animate.css
+* Copyright (c) 2024
 */
+
 @keyframes width {
   0% {width: 0;}
-  100% {width: 1;}
+  100% {width: 100%;}
 }
 
 :root {
   --border-radius: 25px;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: #222222;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #0063cf;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #004a9c;
+}
+
+.link{
+}
+.link:hover{
+  color: #1d76ff;
+}
 * {box-sizing: border-box}
 
 .skill-container {
@@ -32,7 +56,6 @@
 }
 
 /* Skill Language Bars */
-
 .html {width: 90%; background-color: #e14b25; color: #fff; border-radius: var(--border-radius);}
 .css {width: 70%; background-color: #016db7; color: #fff; border-radius: var(--border-radius);}
 .js {width: 30%; background-color: #e2a124; color: #fff; border-radius: var(--border-radius);}
@@ -40,7 +63,6 @@
 .ueblueprints {width: 80%; background-color: #000; color: #fff; border-radius: var(--border-radius);}
 
 /* Skill Tool Bars */
-
 .qubicle {width: 100%; background-color: #e54a68; color: #202020; border-radius: var(--border-radius);}
 .substance {width: 75%; background-color: #1e3101; color: #99e83f; border-radius: var(--border-radius);}
 .blender {width: 85%; background-color: #e87d0d; color: #fff; border-radius: var(--border-radius);}

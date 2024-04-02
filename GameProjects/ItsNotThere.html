@@ -8,30 +8,11 @@
 		<link rel="icon" type="image/x-icon" href="../images/Icon/Icon.ico">
 		<!-- Bootstrap -->
 		<link href="../css/bootstrap.css" rel="stylesheet">
-		<style>
-			/* width */
-			::-webkit-scrollbar {
-			width: 5px;
-			}
-			/* Track */
-			::-webkit-scrollbar-track {
-			background: #222222; 
-			}
-			/* Handle */
-			::-webkit-scrollbar-thumb {
-			background: #0063cf; 
-			}
-			/* Handle on hover */
-			::-webkit-scrollbar-thumb:hover {
-			background: #004a9c; 
-			}
-		</style>
+		<!-- Custom CSS -->
+		<link href="../css/custom.css" rel="stylesheet">
+		<!-- Gets game data from itch -->
 		<script type="text/javascript" src="https://static.itch.io/api.js"></script>
-		<script type="text/javascript">
-		Itch.getGameData({
-			user: "shirwan",
-			game: "its-not-there",
-			onComplete: function(data) {
+		<script type="text/javascript"> Itch.getGameData({user: "shirwan", game: "its-not-there", onComplete: function(data) {
 				var a = document.getElementById("buy_button")
 				a.href = data.links.self
 				var i = document.getElementById("itch_icon")
@@ -41,18 +22,16 @@
 		</script>
 	</head>
 	<body>
-		<ul class="nav nav-tabs justify-content-md-center">
-			<a style="position: absolute; left: 0px;" class="navbar-brand"><img src="../images/Takeaway Studio Logo.png" alt="Bootstrap" width="170"></a>
-			<li class="nav-item"> <a class="nav-link" href="/">Home</a> </li>
-			<li class="nav-item"> <a class="nav-link" href="/GameProjects">Game Projects</a> </li>
-			<li class="nav-item"> <a class="nav-link" href="/3D">3D</a> </li>
-			<li class="nav-item"> <a class="nav-link" href="/Misc">Misc</a> </li>
-			<li class="nav-item"> <a class="nav-link" href="/AboutMe">About Me</a> </li>
-			<li class="nav-item"> <a class="nav-link active" href="">It's Not There</a> </li>
-		</ul>
-		<div class="container">
-			<img src="../images/Banner/Subject015Banner.png" class="img-fluid" alt="Image" height="400">
-			<hr class="line">
+		<div class="container my-5 text-center">
+			<h1 class="text-body-emphasis">3D</h1>
+			<p class="col-lg-8 mx-auto fs-5 text-muted">This section is where some of my 3D is</p>
+			<hr>
+			<a class="btn link" href="/">Home</a>
+			<a class="btn link" href="/GameProjects">Games</a>
+			<a class="btn link" href="/3D">3D</a>
+			<a class="btn link" href="/Misc">Misc</a>
+			<a class="btn link" href="/AboutMe">About Me</a>
+			<hr>
 			<div class="text-center">
 				<span class="badge text-bg-ue5">UE5 - Blueprints</span> <span class="badge text-bg-blender">Blender</span> <span class="badge text-bg-photoshop">Photoshop</span> <span class="badge text-bg-substance">Substance Painter</span>
 			</div>
