@@ -16,22 +16,7 @@
 		<script src="js/jquery.js"></script>
 		<script src="js/bootstrap.js"></script>
 		<!-- Changes any element with the id "change" after 3000ms has passed -->
-		<script>
-            var timeout;
-            function changeText() {
-                if (document.hidden) {
-                } else {
-                    var elem = document.getElementById("change");
-                    elem.innerHTML = 'print("My Portfolio")';
-                    elem.className = "animate__animated animate__fadeOut";
-                    clearTimeout(timeout);
-                    timeout = setTimeout(function () {
-                        elem.innerHTML = "My Portfolio";
-                        elem.className = "animate__animated animate__fadeIn";
-                    }, 2000);
-                }
-            }
-		</script>
+		<script src="js/changeText.js"></script>
 	</head>
 	<body onload="changeText()">
 		<div class="container">
