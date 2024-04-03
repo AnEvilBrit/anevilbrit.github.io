@@ -1,6 +1,8 @@
+function userGame(user, game) {}
+
 Itch.getGameData({
-    user: "shirwan",
-    game: "mushroom-soup",
+    user: this.user,
+    game: this.game,
     onComplete: function(data) {
         var b = document.getElementById("buy_button")
         b.href = data.links.self
