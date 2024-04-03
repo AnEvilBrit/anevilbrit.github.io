@@ -63,6 +63,10 @@ hr{
 	animation: width 1.5s;
 }
 
+.btn-primary{
+	background-color: #151515;
+}
+
 .skill-container {
 	width:100%;
 	background-color: #222;
