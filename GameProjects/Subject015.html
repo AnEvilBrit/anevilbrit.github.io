@@ -13,23 +13,10 @@
 		<!-- Scripts -->
 		<script src="/js/jquery.js"></script>
 		<script src="/js/bootstrap.js"></script>
-		<!-- Gets game data from itch -->
+		<!-- Gets game data from itch and sets it -->
 		<script type="text/javascript" src="https://static.itch.io/api.js"></script>
-		<script type="text/javascript">
-			Itch.getGameData({
-			  user: "shirwan",
-			  game: "subject-015",
-			  onComplete: function(data) {
-				var b = document.getElementById("buy_button")
-				b.href = data.links.self
-				var p = document.getElementById("price")
-				p.innerHTML = data.price
-				var i = document.getElementById("itch_icon")
-				i.src = data.cover_image
-				console.log(data)
-			  }
-			})
-		</script>
+		<script type="text/javascript" src="/js/getitch.js" ></script>
+		<script type="text/javascript">userGame("shirwan", "mushroom-soup");</script>
 	</head>
 	<body>
 		<div class="container">
