@@ -100,3 +100,9 @@ hr{
 .substance {width: 75%; background-color: #1e3101; color: #99e83f; border-radius: var(--border-radius);}
 .aseprite {width: 45%; background-color: #584854; color: #fff; border-radius: var(--border-radius);}
 .godot {width: 10%; background-color: #458dc0; color: #fff; border-radius: var(--border-radius);}
+
+/* Socials */
+.youtube{background-image: url("/images/SVG/Youtube.svg"); background-position: center; background-repeat: no-repeat; background-size: 90%; width: 32px; height: 32px; border: #ffffff00;}
+.x{background-image: url("/images/SVG/X.svg"); background-position: center; background-repeat: no-repeat; background-size: 75%; width: 32px; height: 32px; border: #ffffff00;}
+.itch{background-image: url("/images/SVG/Itch.svg"); background-position: center; background-repeat: no-repeat; background-size: 90%; width: 32px; height: 32px; border: #ffffff00;}
+.github{background-image: url("/images/SVG/Itch.svg"); background-position: center; background-repeat: no-repeat; background-size: 75%; width: 32px; height: 32px; border: #ffffff00;}
