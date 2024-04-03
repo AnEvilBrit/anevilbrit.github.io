@@ -1,74 +1,79 @@
 @charset "UTF-8";
-
 /*
 * custom.css - https://anevil.github.io/
 * Licensed under the MIT license - http://opensource.org/licenses/MIT
 * Copyright (c) 2024
 */
 
+/* Keyframes */
 @keyframes width {
-  0% {width: 0;}
+    0% {width: 0;}
 }
 
 @keyframes opacity{
-  0% {opacity: 0;}
-  100% {opacity: 1;}
+    0% {opacity: 0;}
+    100% {opacity: 1;}
 }
 
-/* width */
+/*Custom scrollbar*/
 ::-webkit-scrollbar {
-  width: 5px;
+	width: 5px;
 }
-/* Track */
+
 ::-webkit-scrollbar-track {
-  background: #222222;
+	background: #222222;
 }
-/* Handle */
+
 ::-webkit-scrollbar-thumb {
-  background: #0063cf;
+	background: #0063cf;
 }
-/* Handle on hover */
+
 ::-webkit-scrollbar-thumb:hover {
-  background: #004a9c;
+	background: #004a9c;
 }
 
 :root {
-  --border-radius: 25px;
+	--border-radius: 25px;
 }
 
 .fade{
-  animation: opacity 1s forwards !important;
+	animation: opacity 1s forwards !important;
 }
 
 .link{
-  animation: opacity 2.5s ease-out;
+	animation: opacity 2.5s ease-out;
 }
 
 .link:hover{
-  color: #1d76ff;
+	color: #1d76ff;
 }
 
 .link:focus{
-  color: #0f458c !important;
-  border: #ffffff00;
+	color: #0f458c !important;
+	border: #ffffff00;
 }
 
-* {box-sizing: border-box}
+hr{
+	margin-left: auto;
+	margin-right: auto;
+	width: 450px;
+	animation: width 1.5s;
+}
 
 .skill-container {
-  width:100%;
-  background-color: #222;
-  border-radius: var(--border-radius);
-  margin-bottom: 10px;
+	width:100%;
+	background-color: #222;
+	border-radius: var(--border-radius);
+	margin-bottom: 10px;
 }
 
 .skills {
-  text-align: left;
-  padding-right: 15px;
-  padding-left: 10px;
-  color: black;
-  animation: width 2.5s ease-out;
-  white-space: nowrap;
+    text-align: left;
+    padding-right: 15px;
+    padding-left: 10px;
+    color: black;
+    animation: width 2.5s ease-out;
+    white-space: nowrap;
 }
 
 /* Skill Language Bars */
