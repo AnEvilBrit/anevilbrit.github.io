@@ -8,12 +8,13 @@ function userGame(user, game) {
         user: username,
         game: gamename,
         onComplete: function(data) {
-            var b = document.getElementById("buy_button")
-            b.href = data.links.self
-            var p = document.getElementById("price")
-            p.innerHTML = data.price
-            var i = document.getElementById("itch_icon")
-            i.src = data.cover_image
+            document.getElementById("buy_button").href = data.links.self
+            if (data.price == null || data.price === "$0.00") {
+                document.getElementById("price").innerHTML = "Free"
+            } else {
+                document.getElementById("price").innerHTML = data.price
+            }
+            document.getElementById("itch_icon").src = data.cover_image
             console.log(data)
         }
     })
