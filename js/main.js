@@ -24,3 +24,4 @@ function animate() {
 }
 
 animate();
+
