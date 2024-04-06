@@ -8973,16 +8973,9 @@ textarea.form-control-lg {
   background-color: rgba(var(--bs-secondary-bg-rgb), var(--bs-bg-opacity)) !important;
 }
 
-@keyframes tertiary {
-  0% {box-shadow: #0063cf 0px 0px;}
-  100% {box-shadow: 1;}
-}
-
 .bg-body-tertiary {
   --bs-bg-opacity: 1;
-  box-shadow: #0063cf 5px -5px;
   background-color: rgba(var(--bs-tertiary-bg-rgb), var(--bs-bg-opacity)) !important;
-  animation: tertiary 1s;
 }
 
 .bg-opacity-10 {
