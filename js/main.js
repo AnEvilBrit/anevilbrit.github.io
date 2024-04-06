@@ -23,8 +23,6 @@ function animate() {
     renderer.render( scene, camera );
 }
 
-animate();
-
 import WebGL from "WebGL";
 
 if ( WebGL.isWebGLAvailable() ) {
