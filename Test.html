@@ -10,9 +10,12 @@
 		<link href="css/bootstrap.css" rel="stylesheet">
 		<!-- Custom CSS -->
 		<link href="css/custom.css" rel="stylesheet">
+		<!-- Code Style -->
+		<link href="css/prism.css" rel="stylesheet">
 		<!-- Scripts -->
 		<script src="js/jquery.js"></script>
 		<script src="js/bootstrap.js"></script>
+		<script src="js/prism.js"></script>
 	</head>
 	<body>
 		<div class="container my-5 text-center">
@@ -26,21 +29,83 @@
 			<a class="btn link" href="/AboutMe">About Me</a>
 			<hr>
 		</div>
-		<div class="fade">
-			<div class="ratio ratio-16x9">
-				<iframe src="https://blueprintue.com/render/-7eq6yoa/" allowfullscreen height="450" width="1100"></iframe>
-				<br>
-				<object data="" type="application/pdf" width="100%" height="850px">
-					<p>Unable to display PDF file. <a href="">View in another tab</a> instead.</p>
-				</object>
-			</div>
+		<div class="container fade">
+			<pre class="language-cpp line-numbers">
+				<code>
+					//my first program in C++
+					#include &lt;iostream&gt;
+
+					int main ()
+					{
+						std::cout << "Hello World!";
+						return 0;
+					}
+					int var = 10;
+					var = #ffffff;
+
+						// Sets default values for this actor's properties
+
+					ALightSwitch();
+
+					//Vector2D Variable
+					UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "First|Second|Third")
+						FVector2D Vector2;
+
+					//Vector3 Variable
+					UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "First|Second")
+						FVector Vector3;
+
+					//Vector4 Variable
+					UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "First")
+						FVector4 Vector4;
+
+					//Boolean Variable
+					UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "First")
+						bool bIsEnabled = false;
+
+					//Integer Variable
+					UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "First", meta = (ClampMin="1", ClampMax="8"))
+						int32 SwitchInput = 1;
+
+					//Float Variable
+					UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "First|Second|Third")
+						float Float = 1.6f;
+
+					UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "First")
+						FColor Colour;
+
+					UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "First")
+						AActor* Actor = nullptr;
+
+					UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "First")
+						ACPPProjectile* Projectile = nullptr;
+
+					UPROPERTY(EditAnywhere,	BlueprintReadWrite, Category = "Second", Meta =(AllowedClasses = "LightSwitch, CPPProjectile"))
+						TArray&lt;AActor*> Actors;
+
+					UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Second", Meta = (ClampMin = "1", ClampMax = "8"))
+						TMap&lt;int32, FString> ActorMap;
+
+					UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Second")
+						TSet&lt;int32> ActorSet;
+
+					UFUNCTION(BlueprintCallable, Category = "First")
+						bool Function(bool bInput) {
+							// Set the value of bIsEnabled to the input value
+							bIsEnabled = bInput;
+
+							// Return the new value of bIsEnabled
+							return bIsEnabled;
+						}
+				</code>
+			</pre>
+			<hr>
+			<footer>
+				<div class="row text-center justify-content-md-center">
+					<p><a href="https://www.youtube.com/@AnEvilBrit" class="btn youtube" target="_blank" rel="noopener noreferrer"></a> &middot; <a href="https://twitter.com/AnEvilBrit" class="btn x" target="_blank" rel="noopener noreferrer"></a> &middot; <a href="https://anevilbrit.itch.io/" class="btn itch" target="_blank" rel="noopener noreferrer"></a> &middot; <a href="https://anevilbrit.itch.io/" class="btn github" target="_blank" rel="noopener noreferrer"></a></p>
+					<p>Copyright &copy; 2024 &middot; All Rights Reserved</p>
+				</div>
+			</footer>
 		</div>
-		<hr>
-		<footer>
-			<div class="row text-center justify-content-md-center">
-				<p><a href="https://www.youtube.com/@AnEvilBrit" class="btn youtube" target="_blank" rel="noopener noreferrer"></a> &middot; <a href="https://twitter.com/AnEvilBrit" class="btn x" target="_blank" rel="noopener noreferrer"></a> &middot; <a href="https://anevilbrit.itch.io/" class="btn itch" target="_blank" rel="noopener noreferrer"></a> &middot; <a href="https://anevilbrit.itch.io/" class="btn github" target="_blank" rel="noopener noreferrer"></a></p>
-				<p>Copyright &copy; 2024 &middot; All Rights Reserved</p>
-			</div>
-		</footer>
 	</body>
 </html>
