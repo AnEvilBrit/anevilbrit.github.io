@@ -1,4 +1,4 @@
-var username, gamename;
+let username, gamename;
 
 function userGame(user, game) {
     username = user;

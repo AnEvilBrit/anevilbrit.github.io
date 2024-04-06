@@ -20,10 +20,6 @@
 		width: 5px;
 	}
 
-	::-webkit-scrollbar-track {
-		background: #222222;
-	}
-
 	::-webkit-scrollbar-thumb {
 		background: #0063cf;
 	}
@@ -145,6 +141,10 @@
 	.filter.active, .filter:hover{
 		filter: brightness(100%);
 		background-color: var(--filter) !important;
+	}
+
+	.itch-price{
+		margin-top: 15px;
 	}
 
 /* Skill Language Bars */
