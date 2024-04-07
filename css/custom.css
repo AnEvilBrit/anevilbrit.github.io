@@ -15,6 +15,12 @@
 		100% {opacity: 1;}
 	}
 
+/* Root */
+	:root {
+		--border-radius: 25px;
+		--filter: #000;
+	}
+
 /*Custom scrollbar*/
 	::-webkit-scrollbar {
 		width: 5px;
@@ -31,11 +37,6 @@
 
 	::-webkit-scrollbar-corner {
 		background: #00000000;
-	}
-
-	:root {
-		--border-radius: 25px;
-		--filter: #000;
 	}
 
 /* Custom Fade */
@@ -68,9 +69,17 @@
 		animation: width 1.5s;
 	}
 
-.btn-primary{
-	background-color: #151515;
-}
+/* Custom Button */
+	.btn-primary{
+		background-color: #151515;
+	}
+
+	.itch-get{
+		@media(max-width: 950px){
+			width: 50%;
+		}
+		width: 25%;
+	}
 
 /* Skills */
 	.skill-container {
