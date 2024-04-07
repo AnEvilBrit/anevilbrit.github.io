@@ -10,9 +10,9 @@ function userGame(user, game) {
         onComplete: function(data) {
             document.getElementById("buy_button").href = data.links.self
             if (data.price == null || data.price === "$0.00") {
-                document.getElementById("price").innerHTML = "Free"
+                document.getElementById("price").innerHTML = "Price: Free"
             } else {
-                document.getElementById("price").innerHTML = data.price
+                document.getElementById("price").innerHTML = "Price:" + data.price
             }
             document.getElementById("itch_icon").src = data.cover_image
             console.log(data)
