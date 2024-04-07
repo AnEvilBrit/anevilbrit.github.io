@@ -4436,7 +4436,7 @@ textarea.form-control-lg {
   transition: 1s;
   z-index: 1000;
   border-radius: 10px;
-  border-width: 5px;
+  border-width: 3px;
   border-color: #0063cf;
 }
 
