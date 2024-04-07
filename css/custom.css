@@ -83,7 +83,7 @@
 
 /* Skills */
 	.skill-container {
-		width:100%;
+		width: 100%;
 		background-color: #222;
 		border-radius: var(--border-radius);
 		margin-bottom: 5px;
@@ -93,7 +93,7 @@
 	.skills {
 		text-align: left;
 		color: black;
-		height: 10px;
+		height: auto;
 		animation: width 2.5s ease-out;
 	}
 
@@ -102,8 +102,15 @@
 		text-align: left;
 	}
 
+	.small-text{
+		font-size: 10px;
+		margin-right: 5px;
+		text-align: end;
+
+	}
+
 /* Custom keyboard type*/
-	.kbd{
+.kbd{
 		background-color: #898b90;
 		color: #222325;
 		border-radius: 0.25rem;
@@ -119,12 +126,12 @@
 		position: relative;
 		top: -1px;
 	}
+
 	.kbd:hover{
 		box-shadow: 0 1px 0 1px #3d3e42;
 		top: 1px;
 	}
 
-/* Custom filter */
 	.filterDiv {
 		filter: brightness(50%);
 	}
@@ -163,22 +170,22 @@
 	}
 
 /* Skill Language Bars */
-.ueblueprints {width: 90%; background-color: #000; border-radius: var(--border-radius);}
-.html {width: 80%; background-color: #e14b25; border-radius: var(--border-radius);}
-.python {width: 70%; background-color: #417fb1; border-radius: var(--border-radius);}
-.css {width: 60%; background-color: #016db7; border-radius: var(--border-radius);}
-.cpp {width: 30%; background-color: #00589d; border-radius: var(--border-radius);}
-.js {width: 25%; background-color: #e2a124;  border-radius: var(--border-radius);}
-.cs {width: 15%; background-color: #00589d; border-radius: var(--border-radius);}
+.ueblueprints {width: 90%; background-color: #000; color: #fff; border-radius: var(--border-radius);}
+.html {width: 80%; background-color: #e14b25; color: #fff; border-radius: var(--border-radius);}
+.python {width: 70%; background-color: #417fb1; color: #fff; border-radius: var(--border-radius);}
+.css {width: 60%; background-color: #016db7; color: #fff; border-radius: var(--border-radius);}
+.cpp {width: 30%; background-color: #00589d; color: #fff;border-radius: var(--border-radius);}
+.js {width: 25%; background-color: #e2a124;  color: #fff; border-radius: var(--border-radius);}
+.cs {width: 15%; background-color: #00589d; color: #fff; border-radius: var(--border-radius);}
 
 /* Skill Tool Bars */
-.qubicle {width: 100%; background-color: #e54a68; border-radius: var(--border-radius);}
-.ue5 {width: 90%; background-color: #000; border-radius: var(--border-radius);}
-.blender {width: 85%; background-color: #e87d0d; border-radius: var(--border-radius);}
-.photoshop {width: 85%; background-color: #043761; border-radius: var(--border-radius);}
-.substance {width: 75%; background-color: #99e83f; border-radius: var(--border-radius);}
-.aseprite {width: 45%; background-color: #584854; border-radius: var(--border-radius);}
-.godot {width: 10%; background-color: #458dc0; border-radius: var(--border-radius);}
+.qubicle {width: 100%; background-color: #e54a68; color: #fff; border-radius: var(--border-radius);}
+.ue5 {width: 90%; background-color: #000; color: #fff; border-radius: var(--border-radius);}
+.blender {width: 85%; background-color: #e87d0d; color: #fff; border-radius: var(--border-radius);}
+.photoshop {width: 85%; background-color: #001e36; color: #31a8ff; border-radius: var(--border-radius);}
+.substance {width: 75%; background-color: #1e3101; color: #99e83f; border-radius: var(--border-radius);}
+.aseprite {width: 45%; background-color: #584854; color: #fff; border-radius: var(--border-radius);}
+.godot {width: 10%; background-color: #458dc0; color: #fff; border-radius: var(--border-radius);}
 
 /* Socials */
 .youtube{background-image: url("/images/SVG/Youtube.svg"); background-position: center; background-repeat: no-repeat; background-size: 90%; width: 32px; height: 32px; border: #ffffff00;}
