@@ -4,7 +4,7 @@ function delay(ms) {
 
 async function percent(num, id, totalDuration) {
     let updatesPerSecond = 60;
-    let delayTime = 1000 / updatesPerSecond; // 1 second / 60 updates = 16.6666666667 ms per update
+    let delayTime = 1000 / updatesPerSecond; // 1 second / 30 updates = ~33.33ms delay
     let increment = num / (totalDuration / delayTime); // Calculate the increment for each update
 
     for(let i = 0; i <= num; i += increment){

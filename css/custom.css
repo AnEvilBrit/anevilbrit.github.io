@@ -90,6 +90,7 @@
 		text-align: left;
 		color: black;
 		height: auto;
+		transition: width 0.3s ease-out;
 	}
 
 	.skill-text{
