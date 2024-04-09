@@ -3,13 +3,30 @@ function delay(ms) {
 }
 
 async function percent(num, id, totalDuration) {
-    let delayTime = totalDuration / num;
-    for(let i = 0; i <= num; i++){
+    let updatesPerSecond = 60;
+    let delayTime = 1000 / updatesPerSecond; // 1 second / 60 updates = 16.6666666667 ms per update
+    let increment = num / (totalDuration / delayTime); // Calculate the increment for each update
+
+    for(let i = 0; i <= num; i += increment){
         await delay(delayTime);
         let element = document.getElementById(id);
         if (element) {
-            element.textContent = i + "%";
+            element.textContent = Math.round(i) + "%";
         }
+        let elementBar = document.getElementById(id + "Bar")
+        if (elementBar) {
+            elementBar.style.width = Math.round(i) + "%";
+        }
+    }
+
+    // Ensure that the progress bar is set to 100% when the function finishes
+    let element = document.getElementById(id);
+    if (element) {
+        element.textContent = num + "%";
+    }
+    let elementBar = document.getElementById(id + "Bar")
+    if (elementBar) {
+        elementBar.style.width = num + "%";
     }
 }
 

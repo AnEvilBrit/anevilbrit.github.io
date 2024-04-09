@@ -6,10 +6,6 @@
 */
 
 /* Keyframes */
-	@keyframes width {
-		0% {width: 0;}
-	}
-
 	@keyframes opacity{
 		0% {opacity: 0;}
 		100% {opacity: 1;}
@@ -94,7 +90,6 @@
 		text-align: left;
 		color: black;
 		height: auto;
-		animation: width 2.5s ease-out;
 	}
 
 	.skill-text{
@@ -170,22 +165,22 @@
 	}
 
 /* Skill Language Bars */
-.ueblueprints {width: 90%; background-color: #000; color: #fff; border-radius: var(--border-radius);}
-.html {width: 80%; background-color: #e14b25; color: #fff; border-radius: var(--border-radius);}
-.python {width: 70%; background-color: #417fb1; color: #fff; border-radius: var(--border-radius);}
-.css {width: 60%; background-color: #016db7; color: #fff; border-radius: var(--border-radius);}
-.cpp {width: 30%; background-color: #00589d; color: #fff;border-radius: var(--border-radius);}
-.js {width: 25%; background-color: #e2a124;  color: #fff; border-radius: var(--border-radius);}
-.cs {width: 15%; background-color: #00589d; color: #fff; border-radius: var(--border-radius);}
+.ueblueprints {background-color: #000; color: #fff; border-radius: var(--border-radius);}
+.html {background-color: #e14b25; color: #fff; border-radius: var(--border-radius);}
+.python {background-color: #417fb1; color: #fff; border-radius: var(--border-radius);}
+.css {background-color: #016db7; color: #fff; border-radius: var(--border-radius);}
+.cpp {background-color: #00589d; color: #fff;border-radius: var(--border-radius);}
+.js {background-color: #e2a124;  color: #fff; border-radius: var(--border-radius);}
+.cs {background-color: #00589d; color: #fff; border-radius: var(--border-radius);}
 
 /* Skill Tool Bars */
-.qubicle {width: 100%; background-color: #e54a68; color: #fff; border-radius: var(--border-radius);}
-.ue5 {width: 90%; background-color: #000; color: #fff; border-radius: var(--border-radius);}
-.blender {width: 85%; background-color: #e87d0d; color: #fff; border-radius: var(--border-radius);}
-.photoshop {width: 85%; background-color: #001e36; color: #31a8ff; border-radius: var(--border-radius);}
-.substance {width: 75%; background-color: #1e3101; color: #99e83f; border-radius: var(--border-radius);}
-.aseprite {width: 45%; background-color: #584854; color: #fff; border-radius: var(--border-radius);}
-.godot {width: 10%; background-color: #458dc0; color: #fff; border-radius: var(--border-radius);}
+.qubicle {background-color: #e54a68; color: #fff; border-radius: var(--border-radius);}
+.ue5 {background-color: #000; color: #fff; border-radius: var(--border-radius);}
+.blender {background-color: #e87d0d; color: #fff; border-radius: var(--border-radius);}
+.photoshop {background-color: #001e36; color: #31a8ff; border-radius: var(--border-radius);}
+.substance {background-color: #1e3101; color: #99e83f; border-radius: var(--border-radius);}
+.aseprite {background-color: #584854; color: #fff; border-radius: var(--border-radius);}
+.godot {background-color: #458dc0; color: #fff; border-radius: var(--border-radius);}
 
 /* Socials */
 .youtube{background-image: url("/images/SVG/Youtube.svg"); background-position: center; background-repeat: no-repeat; background-size: 90%; width: 32px; height: 32px; border: #ffffff00;}
