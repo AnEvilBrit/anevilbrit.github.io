@@ -8,14 +8,22 @@ function userGame(user, game) {
         user: username,
         game: gamename,
         onComplete: function(data) {
-            document.getElementById("buy_button").href = data.links.self
-            if (data.price == null || data.price === "$0.00") {
-                document.getElementById("price").innerHTML = "Price: Free"
-            } else {
-                document.getElementById("price").innerHTML = "Price:" + data.price
+            if (data.links === undefined) {
+                document.getElementById("price").innerHTML = "Game not found"
+                document.getElementById("buy_button").innerHTML = "View My itch.io Page"
+                document.getElementById("buy_button").href = "https://shirwan.itch.io"
+                document.getElementById("itch_icon").src = "/images/Cover/GameNotFound.png"
             }
-            document.getElementById("itch_icon").src = data.cover_image
-            console.log(data)
+            else {
+                document.getElementById("buy_button").href = data.links.self
+                if (data.price == null || data.price === "$0.00") {
+                    document.getElementById("price").innerHTML = "Price: Free"
+                } else {
+                    document.getElementById("price").innerHTML = "Price:" + data.price
+                }
+                document.getElementById("buy_button").innerHTML = "View game on itch!"
+                document.getElementById("itch_icon").src = data.cover_image
+            }
         }
     })
 }
