@@ -63,7 +63,10 @@
 		margin-left: auto;
 		margin-right: auto;
 		@media(min-width: 500px){
-			width: 450px;
+			width: 400px;
+		}
+		@media(max-width: 500px){
+			width: 95%;
 		}
 		width: auto;
 		animation: width 1.5s;
