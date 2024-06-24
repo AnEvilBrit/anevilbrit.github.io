@@ -4427,7 +4427,7 @@ textarea.form-control-lg {
   background-clip: border-box;
   border: var(--bs-card-border-width) solid var(--bs-card-border-color);
   border-radius: var(--bs-card-border-radius);
-  transform: scale(.85);
+  transform: scale(.9);
   transition: 1s ease-out;
 }
 
