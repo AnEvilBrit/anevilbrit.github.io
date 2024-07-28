@@ -107,18 +107,38 @@ void buyItem() {
 
 // Function to update the money you have basicly an idle game.
 void updateMoney(){
-    int time = 0;
     //This updates every second to see which item will add money.
     std::cout << "You will make money every 5 seconds for a car, 15 seconds for a house, 25 seconds for a boat, 35 seconds for a plane and 45 seconds for a spaceship\n";
     std::cout << "You have £" << money << " in your wallet (Exit to buy more items using the 'ESC' key.)\n";
+    int currentTime = 0;
     while (true)
     {
         // When the time is divisible by 5 and not 0 (so each 5 seconds) it will add £10 to your wallet
         // It also checks if the user has bought a car if so it will add £10 to your wallet each 5 seconds
-        if ((time % 5) == 0 && time != 0 && std::find(items.begin(), items.end(), "car") != items.end())
+        if ((currentTime % 5) == 0 && currentTime != 0 && std::find(items.begin(), items.end(), "car") != items.end())
         {
-            money += 10;
-            std::cout << "You have gained £10 you now have £" << money << " in your wallet (Exit to buy more items using the 'ESC' key.)\n";
+            money += 5;
+            std::cout << "You have gained £5 from the car you now have £" << money << " in your wallet\n";
+        }
+        if ((currentTime % 15) == 0 && currentTime != 0 && std::find(items.begin(), items.end(), "house") != items.end())
+        {
+            money += 20;
+            std::cout << "You have gained £20 from the house you now have £" << money << " in your wallet\n";
+        }
+        if ((currentTime % 25) == 0 && currentTime != 0 && std::find(items.begin(), items.end(), "boat") != items.end())
+        {
+            money += 35;
+            std::cout << "You have gained £35 from the boat you now have £" << money << " in your wallet\n";
+        }
+        if ((currentTime % 35) == 0 && currentTime != 0 && std::find(items.begin(), items.end(), "plane") != items.end())
+        {
+            money += 50;
+            std::cout << "You have gained £50 from the plane you now have £" << money << " in your wallet\n";
+        }
+        if ((currentTime % 45) == 0 && currentTime != 0 && std::find(items.begin(), items.end(), "spaceship") != items.end())
+        {
+            money += 65;
+            std::cout << "You have gained £65 from the spaceship you now have £" << money << " in your wallet\n";
         }
         if (GetAsyncKeyState(VK_ESCAPE)) {
             std::cout << "Exiting\n";
@@ -126,7 +146,8 @@ void updateMoney(){
             break;
         }
         Sleep(1000); // Sleeps for 1 second (1000 milliseconds)
-        time++;
+
+        currentTime++;
     }
 }
 
@@ -158,40 +179,33 @@ int main()
     while (response != "4")
     {
         // Prints the options for the user
-        std::cout << "Welcome to the shop\n";
-        std::cout << "1. Buy an item\n";
-        std::cout << "2. Make Money\n";
-        std::cout << "3. Highscore\n";
-        std::cout << "4. Exit\n";
+        std::cout << "Welcome to the shop\n" << "1. Buy an item\n" << "2. Make Money\n" << "3. Highscore\n" << "4. Exit\n";
         std::string response;
         getline(std::cin, response);
-        response = convertStringToLower(response);
-        if (response == "1")
+        int responseint = std::stoi(response);
+        switch (responseint)
         {
-            // Calls the buyItem function to send the user to buy an item
-            buyItem();
+            case 1:
+                // Calls the buyItem function to send the user to buy an item
+                buyItem();
+                break;
+            case 2:
+                // Calls the updateMoney function to send the user to make money
+                updateMoney();
+                break;
+            case 3:
+                // Calls the highscore function to show the current highscore
+                highscore();
+                break;
+            case 4:
+                // Exits the program
+                std::cout << "Exiting\n";
+                break;
+            default:
+                // If the user gives an invalid response it will be none of the cases and be the default, it will then tell them that it is invalid and loop the shop again
+                std::cout << "That is not a valid response\n";
         }
-        else if (response == "2")
-        {   
-            // Calls the updateMoney function to send the user to make money
-            updateMoney();
-        }
-        else if (response == "3")
-        {   
-            // Calls the updateMoney function to send the user to make money
-            highscore();
-        }
-        else if (response == "4")
-        {
-            // Exits the program
-            std::cout << "Exiting\n";
-            break;
-        }
-        else
-        {
-            // If the user gives an invalid response it will tell them that it is invalid and loop the shop again
-            std::cout << "That is not a valid response\n";
-        }
+
     }
     // Prints a thank you message when the user exits the shop
     std::cout << "Thank you for shopping\n";
