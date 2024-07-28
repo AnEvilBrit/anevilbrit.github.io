@@ -50,6 +50,9 @@
   --bs-javascript-rgb: 226, 161, 36;
   --bs-css-rgb: 1, 109, 183;
   --bs-python-rgb: 65, 127, 177;
+  --bs-cpp-rgb: 0, 88, 157;
+  --bs-cmd-rgb: 0, 48, 0;
+  --bs-windows-rgb: 49, 168, 255;
   --bs-secondary-rgb: 108, 117, 125;
   --bs-success-rgb: 25, 135, 84;
   --bs-info-rgb: 13, 202, 240;
@@ -6949,6 +6952,21 @@ textarea.form-control-lg {
 .text-bg-python {
   color: #ffd650 !important;
   background-color: RGBA(var(--bs-python-rgb), var(--bs-bg-opacity, 1)) !important;
+}
+
+.text-bg-cpp {
+  color: #fff !important;
+  background-color: RGBA(var(--bs-cpp-rgb), var(--bs-bg-opacity, 1)) !important;
+}
+
+.text-bg-cmd {
+  color: #fff !important;
+  background-color: RGBA(var(--bs-cmd-rgb), var(--bs-bg-opacity, 1)) !important;
+}
+
+.text-bg-windows {
+  color: #fff !important;
+  background-color: RGBA(var(--bs-windows-rgb), var(--bs-bg-opacity, 1)) !important;
 }
 
 .text-bg-secondary {
