@@ -1,7 +1,8 @@
-#include <iostream>
-#include <string>
-#include <ctime>
-#include <map>
+#include <iostream> // Simple input and output functions
+#include <string> // Allows for string usage
+#include <ctime> // Allows for time() usage and more
+#include <map> // Allows for the usage of maps (dictionaries)
+// Not using namespace std just in case I need to use other libraries and to not conflict with them 
 
 // Function to clean the users input to make it much easier to compare
 std::string stringToLower(std::string str)
@@ -13,6 +14,7 @@ std::string stringToLower(std::string str)
     return str;
 }
 
+// Main function and game
 int main()
 {   
     // Creates a map (dictionary) to see what lose condition will be paried up with the win condition, e.g. rock beats scissors
@@ -50,7 +52,8 @@ int main()
         std::cin >> userChoice;
         
         userChoice = stringToLower(userChoice);
-        
+        system("cls");
+
         // Made this area of code more dynamic so it only needs one if statement
         if (userChoice == "rock" || userChoice == "paper" || userChoice == "scissors")
         {

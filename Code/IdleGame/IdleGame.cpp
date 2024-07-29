@@ -34,8 +34,6 @@ std::string convertStringToLower(std::string str)
 void buyItem() {
 
     //////////////////////////////////// I have no idea how this works :/ ////////////////////////////////////
-    
-    // I have no idea what this does but it's needed for the sort function to work
 
     // Lambda function to sort the vector of pairs by the second element of the pair
 
@@ -271,7 +269,6 @@ int main()
         NewHighscore << money;
         NewHighscore.close();
     }
-
 
     // This will pause the program and display a press any key to continue...
     system("pause");
