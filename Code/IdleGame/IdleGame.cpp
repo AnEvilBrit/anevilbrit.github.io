@@ -226,9 +226,17 @@ int main()
     {
         // Loops through the items the user has bought and prints them
         std::cout << "You have bought the following item(s):\n";
-        for (auto &item : items)
+        for (int i = 0; i < items.size(); i++)
         {
-            std::cout << item << ", ";
+            // This checks if the for loop is at the correct index, items.size() counts the numbers starting at 1 so I - 1 so it is inline with the index
+            if (i < items.size() - 1)
+            {
+                std::cout << items[i] << ", ";
+            }
+            else
+            {
+                std::cout << items[i] << "\n";
+            }
         }
     }
 
