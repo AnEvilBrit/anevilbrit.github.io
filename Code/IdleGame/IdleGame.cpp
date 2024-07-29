@@ -61,8 +61,8 @@ void buyItem() {
     // Converts the user's response to lowercase here so I don't have to do it every time I check the response
     response = convertStringToLower(response);
 
-    // Checks if the user's response is in the map of prices if not it will return 0
-    if (prices[response] == 0)
+    // Checks if the respose is in prices. It compares the result to an invalid end of prices as prices.find() is a bool
+    if (prices.find(response) == prices.end())
     {
         system("cls");
         std::cout << "That is not a valid item to buy\n";
@@ -76,6 +76,7 @@ void buyItem() {
         std::cout << "You do not have enough money to buy that item\n";
         system("pause");
         system("cls");
+        buyItem();
     }
     else
     {
