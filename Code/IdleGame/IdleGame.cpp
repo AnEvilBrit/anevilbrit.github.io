@@ -184,7 +184,7 @@ int main()
     while (responseint != 4)
     {
         // Prints the options for the user
-        std::cout << "Welcome to the shop\n" << "1. Buy an item\n" << "2. Make Money\n" << "3. Highscore\n" << "4. Exit\n";
+        std::cout << "Welcome to the shop\n1. Buy an item\n2. Make Money\n3. Highscore\n4. Exit\n";
         std::string response;
         getline(std::cin, response);
         responseint = std::stoi(response);
