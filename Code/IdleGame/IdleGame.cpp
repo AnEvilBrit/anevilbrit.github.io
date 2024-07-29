@@ -110,38 +110,25 @@ void buyItem() {
 // Function to update the money you have basicly an idle game.
 void updateMoney(){
     //This updates every second to see which item will add money.
-    std::cout << "You will make money every 5 seconds for a car, 15 seconds for a house, 25 seconds for a boat, 35 seconds for a plane and 45 seconds for a spaceship\n";
+    std::cout << "You will make money every 5 seconds, the money varies on what item you buy\n";
     std::cout << "You have £" << money << " in your wallet (Exit to buy more items using the 'ESC' key.)\n";
     int currentTime = 0;
     while (true)
     {
-        // When the time is divisible by 5 and not 0 (so each 5 seconds) it will add £10 to your wallet
-        // It also checks if the user has bought a car if so it will add £10 to your wallet each 5 seconds
-        if ((currentTime % 5) == 0 && currentTime != 0 && std::find(items.begin(), items.end(), "car") != items.end())
+        // A map for the items and how much they pay each 5 seconds
+        std::map<std::string, int> itemsmap = {{"car", 5},{"house", 15},{"boat", 25},{"plane", 35},{"spaceship", 45}};
+
+        // This for loop will loop through the items you own. When the time is divisible by 5 and not 0 (so each 5 seconds) it will add an ammount that the item generates to your wallet
+        for (int i = 0; i < items.size(); i++)
         {
-            money += 5;
-            std::cout << "You have gained £5 from the car you now have £" << money << " in your wallet\n";
+            if ((currentTime % 5) == 0 && currentTime != 0 && std::find(items.begin(), items.end(), items[i]) != items.end())
+            {
+                // Gets the matched money per 5 seconds
+                money += itemsmap[items[i]];
+                std::cout << "You have gained £" << itemsmap[items[i]] << " from the " << items[i] << " you now have £" << money << " in your wallet\n";
+            }
         }
-        if ((currentTime % 15) == 0 && currentTime != 0 && std::find(items.begin(), items.end(), "house") != items.end())
-        {
-            money += 20;
-            std::cout << "You have gained £20 from the house you now have £" << money << " in your wallet\n";
-        }
-        if ((currentTime % 25) == 0 && currentTime != 0 && std::find(items.begin(), items.end(), "boat") != items.end())
-        {
-            money += 35;
-            std::cout << "You have gained £35 from the boat you now have £" << money << " in your wallet\n";
-        }
-        if ((currentTime % 35) == 0 && currentTime != 0 && std::find(items.begin(), items.end(), "plane") != items.end())
-        {
-            money += 50;
-            std::cout << "You have gained £50 from the plane you now have £" << money << " in your wallet\n";
-        }
-        if ((currentTime % 45) == 0 && currentTime != 0 && std::find(items.begin(), items.end(), "spaceship") != items.end())
-        {
-            money += 65;
-            std::cout << "You have gained £65 from the spaceship you now have £" << money << " in your wallet\n";
-        }
+
         if (GetAsyncKeyState(VK_ESCAPE)) {
             std::cout << "Exiting\n";
             Sleep(500); // Add a small delay to prevent immediate re-trigger
