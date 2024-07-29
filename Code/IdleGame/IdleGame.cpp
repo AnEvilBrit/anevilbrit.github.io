@@ -182,15 +182,15 @@ int main()
     SetConsoleOutputCP(CP_UTF8);
     SetConsoleCP(CP_UTF8);
 
-    std::string response;
+    int responseint;
     // Loops the shop until the user gives a valid response
-    while (response != "4")
+    while (responseint != 4)
     {
         // Prints the options for the user
         std::cout << "Welcome to the shop\n" << "1. Buy an item\n" << "2. Make Money\n" << "3. Highscore\n" << "4. Exit\n";
         std::string response;
         getline(std::cin, response);
-        int responseint = std::stoi(response);
+        responseint = std::stoi(response);
         switch (responseint)
         {
             case 1:
@@ -217,9 +217,6 @@ int main()
                 // If the user gives an invalid response it will be none of the cases and be the default, it will then tell them that it is invalid and loop the shop again
                 std::cout << "That is not a valid response\n";
         }
-
-        // You only get here after using "4" to exit so it works :D
-        break;
     }
     // Prints a thank you message when the user exits the shop
     std::cout << "Thank you for shopping\n";
