@@ -69,7 +69,9 @@ void buyItem() {
     }
     else if (money < prices[response])
     {
+        system("cls");
         std::cout << "You do not have enough money to buy that item\n";
+        system("pause");
     }
     else
     {
