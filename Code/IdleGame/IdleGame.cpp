@@ -50,10 +50,10 @@ void buyItem() {
     //////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     // Asks the user what they want to do with their money
-    std::cout << "You have \u00A3" << money << " on you. Here are some options to do with it:\n";
+    std::cout << "You have $" << money << " on you. Here are some options to do with it:\n";
     for (auto &item : itemstobuy)
     {
-        std::cout << item.first << " for \u00A3" << item.second << "\n";
+        std::cout << item.first << " for $" << item.second << "\n";
     }
     
     // Gets the user's response
@@ -77,7 +77,7 @@ void buyItem() {
     {
         // Money is subtracted from the user's wallet by settting the money variable
         money -= prices[response];
-        std::cout << "You have bought a " << response << " for \u00A3" << prices[response] << ". you now have \u00A3" << money << " left in your wallet\n";
+        std::cout << "You have bought a " << response << " for $" << prices[response] << ". you now have $" << money << " left in your wallet\n";
         // Adds the item to the user's inventory (using a vector because an array is not dynamic and a vector is much easier :D)
         items.push_back(response);
         // Loops this section until the user gives a valid response
@@ -109,36 +109,36 @@ void buyItem() {
 void updateMoney(){
     //This updates every second to see which item will add money.
     std::cout << "You will make money every 5 seconds for a car, 15 seconds for a house, 25 seconds for a boat, 35 seconds for a plane and 45 seconds for a spaceship\n";
-    std::cout << "You have \u00A3" << money << " in your wallet (Exit to buy more items using the 'ESC' key.)\n";
+    std::cout << "You have $" << money << " in your wallet (Exit to buy more items using the 'ESC' key.)\n";
     int currentTime = 0;
     while (true)
     {
-        // When the time is divisible by 5 and not 0 (so each 5 seconds) it will add \u00A310 to your wallet
-        // It also checks if the user has bought a car if so it will add \u00A310 to your wallet each 5 seconds
+        // When the time is divisible by 5 and not 0 (so each 5 seconds) it will add $10 to your wallet
+        // It also checks if the user has bought a car if so it will add $10 to your wallet each 5 seconds
         if ((currentTime % 5) == 0 && currentTime != 0 && std::find(items.begin(), items.end(), "car") != items.end())
         {
             money += 5;
-            std::cout << "You have gained \u00A35 from the car you now have \u00A3" << money << " in your wallet\n";
+            std::cout << "You have gained $5 from the car you now have $" << money << " in your wallet\n";
         }
         if ((currentTime % 15) == 0 && currentTime != 0 && std::find(items.begin(), items.end(), "house") != items.end())
         {
             money += 20;
-            std::cout << "You have gained \u00A320 from the house you now have \u00A3" << money << " in your wallet\n";
+            std::cout << "You have gained $20 from the house you now have $" << money << " in your wallet\n";
         }
         if ((currentTime % 25) == 0 && currentTime != 0 && std::find(items.begin(), items.end(), "boat") != items.end())
         {
             money += 35;
-            std::cout << "You have gained \u00A335 from the boat you now have \u00A3" << money << " in your wallet\n";
+            std::cout << "You have gained $35 from the boat you now have $" << money << " in your wallet\n";
         }
         if ((currentTime % 35) == 0 && currentTime != 0 && std::find(items.begin(), items.end(), "plane") != items.end())
         {
             money += 50;
-            std::cout << "You have gained \u00A350 from the plane you now have \u00A3" << money << " in your wallet\n";
+            std::cout << "You have gained $50 from the plane you now have $" << money << " in your wallet\n";
         }
         if ((currentTime % 45) == 0 && currentTime != 0 && std::find(items.begin(), items.end(), "spaceship") != items.end())
         {
             money += 65;
-            std::cout << "You have gained \u00A365 from the spaceship you now have \u00A3" << money << " in your wallet\n";
+            std::cout << "You have gained $65 from the spaceship you now have $" << money << " in your wallet\n";
         }
         if (GetAsyncKeyState(VK_ESCAPE)) {
             std::cout << "Exiting\n";
@@ -161,7 +161,7 @@ void highscore()
         std::ifstream ReadHighscore(highscorefile);
         std::string score;
         getline(ReadHighscore, score);
-        std::cout << "Your highscore is \u00A3" << score << "\n";
+        std::cout << "Your highscore is $" << score << "\n";
         ReadHighscore.close();
     }
     else
@@ -236,11 +236,11 @@ int main()
 
         if (scoreNum > money)
         {
-            std::cout << "Your highscore for money was \u00A3" << scoreNum << " you got \u00A3" << money << " try again next time!\n";
+            std::cout << "Your highscore for money was $" << scoreNum << " you got $" << money << " try again next time!\n";
         }
         else
         {
-            std::cout << "Your highscore for money was \u00A3" << money << " This is more than what was saved! Well done!\n";
+            std::cout << "Your highscore for money was $" << money << " This is more than what was saved! Well done!\n";
             std::ofstream NewHighscore(highscorefile);
             NewHighscore << money;
             NewHighscore.close();
@@ -250,7 +250,7 @@ int main()
     }
     else
     {
-        std::cout << "Your highscore for money was \u00A3" << money << " This is more than what was saved! Well done!\n";
+        std::cout << "Your highscore for money was $" << money << " This is more than what was saved! Well done!\n";
         std::ofstream NewHighscore(highscorefile);
         NewHighscore << money;
         NewHighscore.close();
