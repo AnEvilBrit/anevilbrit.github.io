@@ -1,10 +1,10 @@
-﻿#include <iostream>
-#include <fstream>
-#include <filesystem>
-#include <string>
-#include <map>
-#include <vector>
-#include <algorithm>
+﻿#include <iostream> // Allows for simple input and output functions
+#include <fstream>  // Allows for simple file controls
+#include <filesystem>   // Allows for more advanced file controls
+#include <string>   // Allows the use of strings
+#include <map>  // Allows the use of maps (dictionaries)
+#include <vector>   // Allows the use of vectors (can be dynamically edited unlike arrays)
+#include <algorithm>    // Allows the sorting and such of items
 #include <windows.h> // For sleep function windows only :) it was the easy way to do it
 // Not including using namespace std to avoid conflicts with other libraries if I ever use them
 
@@ -77,6 +77,7 @@ void buyItem() {
     {
         // Money is subtracted from the user's wallet by settting the money variable
         money -= prices[response];
+        system("cls");
         std::cout << "You have bought a " << response << " for £" << prices[response] << ". you now have £" << money << " left in your wallet\n";
         // Adds the item to the user's inventory (using a vector because an array is not dynamic and a vector is much easier :D)
         items.push_back(response);
@@ -90,12 +91,15 @@ void buyItem() {
 
             if (response == "yes")
             {   
+                system("cls");
                 buyItem();
                 break;
             }
             else if (response == "no")
             {
                 std::cout << "You have finished buying items\n";
+                system("pause");
+                system("cls");
             }
             else
             {
@@ -143,6 +147,7 @@ void updateMoney(){
         if (GetAsyncKeyState(VK_ESCAPE)) {
             std::cout << "Exiting\n";
             Sleep(500); // Add a small delay to prevent immediate re-trigger
+            system("cls");
             break;
         }
         Sleep(1000); // Sleeps for 1 second (1000 milliseconds)
@@ -169,6 +174,7 @@ void highscore()
         std::cout << "Highscore does not exist\n";
     }
     system("pause");
+    system("cls");
 }
 
 // Main function to run the shop after any of the functions end
@@ -191,25 +197,31 @@ int main()
         {
             case 1:
                 // Calls the buyItem function to send the user to buy an item
+                system("cls");
                 buyItem();
                 break;
             case 2:
                 // Calls the updateMoney function to send the user to make money
+                system("cls");
                 updateMoney();
                 break;
             case 3:
                 // Calls the highscore function to show the current highscore
+                system("cls");
                 highscore();
                 break;
             case 4:
                 // Exits the program
                 std::cout << "Exiting\n";
+                system("cls");
                 break;
             default:
                 // If the user gives an invalid response it will be none of the cases and be the default, it will then tell them that it is invalid and loop the shop again
                 std::cout << "That is not a valid response\n";
         }
 
+        // You only get here after using "4" to exit so it works :D
+        break;
     }
     // Prints a thank you message when the user exits the shop
     std::cout << "Thank you for shopping\n";
