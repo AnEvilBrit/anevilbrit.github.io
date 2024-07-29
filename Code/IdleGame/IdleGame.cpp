@@ -49,7 +49,7 @@ void buyItem() {
 
     // Asks the user what they want to do with their money
     std::cout << "You have £" << money << " on you. Here are some options to do with it:\n";
-    for (auto item : itemstobuy)
+    for (auto &item : itemstobuy)
     {
         std::cout << item.first << " for £" << item.second << "\n";
     }
@@ -82,7 +82,7 @@ void buyItem() {
         // Money is subtracted from the user's wallet by settting the money variable
         money -= prices[response];
         system("cls");
-        std::cout << "You have bought a " << response << " for £" << prices[response] << ". you now have £" << money << " left in your wallet\n";
+        std::cout << "You have bought a " << response << " for £" << prices[response] << ". You now have £" << money << " left in your wallet\n";
         // Adds the item to the user's inventory (using a vector because an array is not dynamic and a vector is much easier :D)
         items.push_back(response);
         // Loops this section until the user gives a valid response
@@ -228,7 +228,7 @@ int main()
         std::cout << "You have bought the following item(s):\n";
         for (auto &item : items)
         {
-            std::cout << item << "\n";
+            std::cout << item << ", ";
         }
     }
 
