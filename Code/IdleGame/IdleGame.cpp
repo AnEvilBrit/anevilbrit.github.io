@@ -49,7 +49,7 @@ void buyItem() {
 
     // Asks the user what they want to do with their money
     std::cout << "You have £" << money << " on you. Here are some options to do with it:\n";
-    for (auto &item : itemstobuy)
+    for (auto item : itemstobuy)
     {
         std::cout << item.first << " for £" << item.second << "\n";
     }
@@ -64,7 +64,10 @@ void buyItem() {
     // Checks if the user's response is in the map of prices if not it will return 0
     if (prices[response] == 0)
     {
+        system("cls");
         std::cout << "That is not a valid item to buy\n";
+        system("pause");
+        system("cls");
         buyItem();
     }
     else if (money < prices[response])
@@ -72,6 +75,7 @@ void buyItem() {
         system("cls");
         std::cout << "You do not have enough money to buy that item\n";
         system("pause");
+        system("cls");
     }
     else
     {
@@ -97,13 +101,17 @@ void buyItem() {
             }
             else if (response == "no")
             {
+                system("cls");
                 std::cout << "You have finished buying items\n";
                 system("pause");
                 system("cls");
             }
             else
             {
+                system("cls");
                 std::cout << "That is not a valid response\n";
+                system("pause");
+                system("cls");
             }
         }
     }
