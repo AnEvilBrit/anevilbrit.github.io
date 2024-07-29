@@ -76,7 +76,6 @@ void buyItem() {
         std::cout << "You do not have enough money to buy that item\n";
         system("pause");
         system("cls");
-        buyItem();
     }
     else
     {
