@@ -10,14 +10,14 @@ std::string computer;
 // Variable for the users choice
 std::string userChoice;
 
-// Function to clean the users input to make it much easier to compare
-std::string stringToLower(std::string str)
-{
-    for (int i = 0; i < str.length(); i++)
-    {
-        str[i] = tolower(str[i]);
+// This takes an input of a string and then creates a variable that will output the lowercase string. 
+// The for loop will go through the string character by character and sets c as the character it ends up on each loop, you can then do anything with the character, e.g. append it on to the lowerStr variable to recreate the string. 
+std::string stringToLower(std::string str) {
+    std::string lowerStr;
+    for (char c : str) {
+        lowerStr += std::tolower(c);
     }
-    return str;
+    return lowerStr;
 }
 
 // Main function and game
