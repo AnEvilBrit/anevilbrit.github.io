@@ -254,7 +254,8 @@ int main()
         {
             std::cout << "Your highscore for money was £" << scoreNum << " you got £" << money << " try again next time!\n";
         }
-        else if (scoreNum = money)
+        // Remember "=" != "==" ffs
+        else if (scoreNum == money)
         {
             std::cout << "Your highscore for money was £" << money << " This is the same as what you gained this round. Try again next time!\n";
         }
