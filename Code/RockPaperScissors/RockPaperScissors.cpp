@@ -4,6 +4,12 @@
 #include <map> // Allows for the usage of maps (dictionaries)
 // Not using namespace std just in case I need to use other libraries and to not conflict with them 
 
+// Variable for the computers choice
+std::string computer;
+
+// Variable for the users choice
+std::string userChoice;
+
 // Function to clean the users input to make it much easier to compare
 std::string stringToLower(std::string str)
 {
@@ -27,7 +33,6 @@ int main()
     // This makes a random number from 0 - 2. This is because rand() % 3 = 0 - 2
     int randomNum = rand() % 3;
 
-    std::string computer;
     // Switch for choosing the computers hand. This is better than if statements because it is more manageable
     switch (randomNum)
     {
@@ -42,17 +47,15 @@ int main()
         break;
     }
 
-    std::string userChoice;
-
     // Repeats the program until a correct input is written. This makes it so wrong inputs are not passed through which would create errors
     while (userChoice != "rock" || userChoice != "paper" || userChoice != "scissors")
     {
-        // Asks the user for rock paper or scissors
+        // Asks the user for rock paper or scissors converts the input to lower so the input is case insensitive
         std::cout << "Rock, Paper or Scissors?\n";
         std::cin >> userChoice;
-        
         userChoice = stringToLower(userChoice);
         system("cls");
+        
 
         // Made this area of code more dynamic so it only needs one if statement
         if (userChoice == "rock" || userChoice == "paper" || userChoice == "scissors")
