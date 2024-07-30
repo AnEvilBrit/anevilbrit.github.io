@@ -27,7 +27,6 @@ int main()
     std::map<std::string, std::string> conditions = {{"paper", "rock"},{"scissors", "paper"},{"rock", "scissors"}};
 
     // Random number gen for the computer
-    // Uses ctime for a random seed time() gives the current timestamp which will be different every time you run this program
     std::srand(std::time(nullptr));
     
     // This makes a random number from 0 - 2. This is because rand() % 3 = 0 - 2
@@ -55,7 +54,6 @@ int main()
         std::cin >> userChoice;
         userChoice = stringToLower(userChoice);
         system("cls");
-        
 
         // Made this area of code more dynamic so it only needs one if statement
         if (userChoice == "rock" || userChoice == "paper" || userChoice == "scissors")
