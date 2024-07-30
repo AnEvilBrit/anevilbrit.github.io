@@ -27,6 +27,7 @@ int main()
     std::map<std::string, std::string> conditions = {{"paper", "rock"},{"scissors", "paper"},{"rock", "scissors"}};
 
     // Random number gen for the computer
+    // Uses ctime for a random seed this seed is used for true random numbers if it was the same seed each time it would output the same random numbers, time() gives the current timestamp which will be different every time you run this program
     std::srand(std::time(nullptr));
     
     // This makes a random number from 0 - 2. This is because rand() % 3 = 0 - 2
