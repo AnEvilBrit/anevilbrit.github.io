@@ -4,6 +4,7 @@
 #include <string>   // Allows the use of strings
 #include <map>  // Allows the use of maps (dictionaries)
 #include <vector>   // Allows the use of vectors (can be dynamically edited unlike arrays)
+#include <set> // Allows for easy checking and setting of items
 #include <algorithm>    // Allows the sorting and such of items
 #include <windows.h> // For sleep function windows only :) it was the easy way to do it
 #include <mutex> // Mutex for thread safety
@@ -23,6 +24,13 @@ std::map<std::string, int> prices = {{"car", 50}, {"house", 100}, {"boat", 150},
 
 // Array of items you own
 std::vector<std::string> items;
+
+// A map for the items and how much they pay each 5 seconds
+std::map<std::string, int> itemsMap = {{"car", 5},{"house", 15},{"boat", 25},{"plane", 35},{"spaceship", 45}};
+
+// Items that you own in singular form
+std::vector<std::string> itemsVector = {};
+std::set<std::string> uniqueItems;
 
 //Function to convert a string to lowercase - it loops through the given string and converts each character to lowercase
 std::string convertStringToLower(std::string str)
@@ -99,6 +107,13 @@ void buyItem() {
     {
         // Money is subtracted from the user's wallet by setting the money variable
         money -= prices[response];
+        
+        // Adds the item to uniqueItems, so it can be used later :D
+        if (uniqueItems.find(response) == uniqueItems.end())
+        {
+            uniqueItems.insert(response);
+        }
+        
         clearConsole();
         std::cout << "You have bought a " << response << " for £" << prices[response] << ". You now have £" << money << " left in your wallet\n";
         // Adds the item to the user's inventory (using a vector because an array is not dynamic and a vector is much easier :D)
@@ -117,20 +132,21 @@ void buyItem() {
                 buyItem();
                 break;
             }
-            else if (response == "no")
+            
+            // This is an if statement not an else if because the response is yes it won't get here
+            if (response == "no")
             {
                 clearConsole();
                 std::cout << "You have finished buying items\n";
-                wait();
-                clearConsole();
             }
             else
             {
                 clearConsole();
                 std::cout << "That is not a valid response\n";
-                wait();
-                clearConsole();
             }
+            
+            wait();
+            clearConsole();
         }
     }
 }
@@ -143,17 +159,16 @@ void updateMoney(){
     int currentTime = 0;
     while (true)
     {
-        // A map for the items and how much they pay each 5 seconds
-        std::map<std::string, int> itemsMap = {{"car", 5},{"house", 15},{"boat", 25},{"plane", 35},{"spaceship", 45}};
-
         // This for loop will loop through the items you own. When the time is divisible by 5 and not 0 (so each 5 seconds) it will add an amount that the item generates to your wallet
-        for (auto &item : items)
+        for (auto &itemSingular : uniqueItems)
         {
-            if ((currentTime % 5) == 0 && currentTime != 0 && std::find(items.begin(), items.end(), item) != items.end())
+            if ((currentTime % 5) == 0 && currentTime != 0 && std::find(items.begin(), items.end(), itemSingular) != items.end())
             {
                 // Gets the matched money per 5 seconds
-                money += itemsMap[item];
-                std::cout << "You have gained £" << itemsMap[item] << " from the " << item << " you now have £" << money << " in your wallet\n";
+                int count = static_cast<int>(std::count(items.begin(), items.end(), itemSingular));
+                int moneyGained = itemsMap[itemSingular] * count;
+                money += moneyGained;
+                std::cout << "You have gained £" << moneyGained << " from the " << itemSingular << " x"<< count << " you now have £" << money << " in your wallet\n";
             }
         }
 
@@ -243,16 +258,17 @@ int main()
     {
         // Loops through the items the user has bought and prints them
         std::cout << "You have bought the following item(s):\n";
-        for (auto item = items.begin(); item != items.end(); ++item)
+        for (auto item = uniqueItems.begin(); item != uniqueItems.end(); ++item)
         {
-            // This checks if the for loop is at the correct index, items.size() counts the numbers starting at 1, so I - 1, so it is inline with the index
-            if (item != items.end() - 1)
+            int count = static_cast<int>(std::count(items.begin(), items.end(), *item));
+            // This checks if the item is one before the end if so it will add a new line at the end instead of a comma
+            if (item == std::prev(uniqueItems.end()))
             {
-                std::cout << *item << ", ";
+                std::cout << *item << " x" << count << "\n";
             }
             else
             {
-                std::cout << *item << "\n";
+                std::cout << *item << " x" << count << ", ";
             }
         }
     }
