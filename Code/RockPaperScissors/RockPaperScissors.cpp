@@ -2,7 +2,10 @@
 #include <string> // Allows for string usage
 #include <ctime> // Allows for time() usage and more
 #include <map> // Allows for the usage of maps (dictionaries)
+#include <mutex>
 // Not using namespace std just in case I need to use other libraries and to not conflict with them 
+
+std::mutex mtx;
 
 // Variable for the computers choice
 std::string computer;
@@ -15,9 +18,22 @@ std::string stringToLower(std::string str)
 {
     for (auto &c : str)
     {
-        c = tolower(c);
+        c = static_cast<char>(tolower(static_cast<unsigned char>(c)));
     }
     return str;
+}
+
+void clearConsole()
+{
+    // This works without (in namespace std) because of C++17 and beyond. They don't require this
+    std::lock_guard lock(mtx);
+    system("cls");  // NOLINT(concurrency-mt-unsafe) I am using protection :)
+}
+
+void wait()
+{
+    std::cout << "Press the 'Enter' key to continue... ";
+    std::cin.get();
 }
 
 // Main function and game
@@ -25,16 +41,13 @@ int main()
 {   
     // Creates a map (dictionary) to see what lose condition will be paired up with the win condition, e.g. rock beats scissors
     std::map<std::string, std::string> conditions = {{"paper", "rock"},{"scissors", "paper"},{"rock", "scissors"}};
-
-    // Random number gen for the computer
+    
     // Uses ctime for a random seed this seed is used for true random numbers if it was the same seed each time it would output the same random numbers, time() gives the current timestamp which will be different every time you run this program
-    std::srand(std::time(nullptr));
+    std::srand(std::time(nullptr));  // NOLINT(clang-diagnostic-shorten-64-to-32, cert-msc51-cpp) This is because it should be fine as it is an RNG generator
     
     // This makes a random number from 0 to 2. This is because rand() % 3 = 0 - 2
-    int randomNum = rand() % 3;
-
     // Switch for choosing the computers hand. This is better than if statements because it is more manageable
-    switch (randomNum)
+    switch (rand() % 3)  // NOLINT(concurrency-mt-unsafe) It will be safe (Even though I am using mutex earlier :D)
     {
     case 0:
         computer = "rock";
@@ -58,7 +71,7 @@ int main()
         std::cout << "Rock, Paper or Scissors?\n";
         std::cin >> userChoice;
         userChoice = stringToLower(userChoice);
-        system("cls");
+        clearConsole();
 
         // Made this area of code more dynamic, so it only needs one if statement
         if (userChoice == "rock" || userChoice == "paper" || userChoice == "scissors")
@@ -88,6 +101,6 @@ int main()
     }
 
     // This allows the user to see the output of the program and when they want to exit they can press any key to do so
-    system("pause");
+    wait();
     return 0;
 }

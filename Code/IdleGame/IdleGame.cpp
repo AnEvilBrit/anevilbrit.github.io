@@ -6,10 +6,14 @@
 #include <vector>   // Allows the use of vectors (can be dynamically edited unlike arrays)
 #include <algorithm>    // Allows the sorting and such of items
 #include <windows.h> // For sleep function windows only :) it was the easy way to do it
+#include <mutex> // Mutex for thread safety
 // Not including using namespace std to avoid conflicts with other libraries if I ever use them
 
+// This is here for thread safety (From what I have understood it will lock so if another thread wants to "talk" it cannot, thus keeping it safe)
+std::mutex mtx;
+
 // This is so I can change the save location easier
-std::string highscorefile = "Highscore.txt";
+std::string highScoreFile = "HighScore.txt";
 
 // Money you start with
 int money = 100;
@@ -25,9 +29,23 @@ std::string convertStringToLower(std::string str)
 {
     for (auto &c : str)
     {
-        c = tolower(c);
+        c = static_cast<char>(tolower(static_cast<unsigned char>(c)));
     }
     return str;
+}
+
+// Function to clear the console as safe as I can
+void clearConsole()
+{
+    std::lock_guard lock(mtx); // Locks the mutex
+    system("cls");  // NOLINT(concurrency-mt-unsafe) This is because I am using mutex to be thread safe :D
+}
+
+// Function to make the program wait until the user presses the enter key
+void wait()
+{
+    std::cout << "Press the 'Enter' key to continue... ";
+    std::cin.get();
 }
 
 // Function to buy an item
@@ -64,24 +82,24 @@ void buyItem() {
     // Checks if the response is in prices. It compares the result to an invalid end of prices as prices.find() is a bool
     if (prices.find(response) == prices.end())
     {
-        system("cls");
+        clearConsole();
         std::cout << "That is not a valid item to buy\n";
-        system("pause");
-        system("cls");
+        wait();
+        clearConsole();
         buyItem();
     }
     else if (money < prices[response])
     {
-        system("cls");
+        clearConsole();
         std::cout << "You do not have enough money to buy that item\n";
-        system("pause");
-        system("cls");
+        wait();
+        clearConsole();
     }
     else
     {
         // Money is subtracted from the user's wallet by setting the money variable
         money -= prices[response];
-        system("cls");
+        clearConsole();
         std::cout << "You have bought a " << response << " for £" << prices[response] << ". You now have £" << money << " left in your wallet\n";
         // Adds the item to the user's inventory (using a vector because an array is not dynamic and a vector is much easier :D)
         items.push_back(response);
@@ -95,23 +113,23 @@ void buyItem() {
 
             if (response == "yes")
             {   
-                system("cls");
+                clearConsole();
                 buyItem();
                 break;
             }
             else if (response == "no")
             {
-                system("cls");
+                clearConsole();
                 std::cout << "You have finished buying items\n";
-                system("pause");
-                system("cls");
+                wait();
+                clearConsole();
             }
             else
             {
-                system("cls");
+                clearConsole();
                 std::cout << "That is not a valid response\n";
-                system("pause");
-                system("cls");
+                wait();
+                clearConsole();
             }
         }
     }
@@ -142,7 +160,7 @@ void updateMoney(){
         if (GetAsyncKeyState(VK_ESCAPE)) {
             std::cout << "Exiting\n";
             Sleep(500); // Add a small delay to prevent immediate re-trigger
-            system("cls");
+            clearConsole();
             break;
         }
         Sleep(1000); // Sleeps for 1 second (1000 milliseconds)
@@ -151,24 +169,24 @@ void updateMoney(){
     }
 }
 
-void highscore()
+void highScore()
 {
     // Uses filesystem to see if a score exists is, so it will show the user
-    if (std::filesystem::exists(highscorefile))
+    if (std::filesystem::exists(highScoreFile))
     {
         // Gets the score from the file, and then shows it to the user. If there is no score it will tell the user the high score does not exist
-        std::ifstream ReadHighscore(highscorefile);
+        std::ifstream readHighScore(highScoreFile);
         std::string score;
-        getline(ReadHighscore, score);
+        getline(readHighScore, score);
         std::cout << "Your high score is £" << score << "\n";
-        ReadHighscore.close();
+        readHighScore.close();
     }
     else
     {
         std::cout << "High score does not exist\n";
     }
-    system("pause");
-    system("cls");
+    wait();
+    clearConsole();
 }
 
 // Main function to run the shop after any of the functions end
@@ -191,23 +209,23 @@ int main()
         {
             case 1:
                 // Calls the buyItem function to send the user to buy an item
-                system("cls");
+                clearConsole();
                 buyItem();
                 break;
             case 2:
                 // Calls the updateMoney function to send the user to make money
-                system("cls");
+                clearConsole();
                 updateMoney();
                 break;
             case 3:
                 // Calls the high score function to show the current high score
-                system("cls");
-                highscore();
+                clearConsole();
+                highScore();
                 break;
             case 4:
                 // Exits the program
                 std::cout << "Exiting\n";
-                system("cls");
+                clearConsole();
                 break;
             default:
                 // If the user gives an invalid response it will be none of the cases and be the default, it will then tell them that it is invalid and loop the shop again
@@ -240,12 +258,12 @@ int main()
     }
 
     // Checks if the file exists
-    if (std::filesystem::exists(highscorefile))
+    if (std::filesystem::exists(highScoreFile))
     {
         // Opens the file and reads it. Converts the string into an int, so I can use operators on the score
-        std::ifstream ReadHighscore(highscorefile);
+        std::ifstream readHighScore(highScoreFile);
         std::string score;
-        getline(ReadHighscore, score);
+        getline(readHighScore, score);
         int scoreNum = std::stoi(score);
 
         if (scoreNum > money)
@@ -260,22 +278,22 @@ int main()
         else
         {
             std::cout << "Your high score for money was £" << money << " This is more than what was saved! Well done!\n";
-            std::ofstream NewHighscore(highscorefile);
-            NewHighscore << money;
-            NewHighscore.close();
+            std::ofstream newHighScore(highScoreFile);
+            newHighScore << money;
+            newHighScore.close();
         }
         
-        ReadHighscore.close();
+        readHighScore.close();
     }
     else
     {
         std::cout << "Your high score for money was £" << money << " This is more than what was saved! Well done!\n";
-        std::ofstream NewHighscore(highscorefile);
-        NewHighscore << money;
-        NewHighscore.close();
+        std::ofstream newHighScore(highScoreFile);
+        newHighScore << money;
+        newHighScore.close();
     }
 
-    // This will pause the program and display a press any key to continue...
-    system("pause");
+    // This will pause the program and display press the enter key to continue...
+    wait();
     return 0;
 }
