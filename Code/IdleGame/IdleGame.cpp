@@ -23,9 +23,9 @@ std::vector<std::string> items;
 //Function to convert a string to lowercase - it loops through the given string and converts each character to lowercase
 std::string convertStringToLower(std::string str)
 {
-    for (int i = 0; i < str.length(); i++)
+    for (auto &c : str)
     {
-        str[i] = tolower(str[i]);
+        c = tolower(c);
     }
     return str;
 }
@@ -129,13 +129,13 @@ void updateMoney(){
         std::map<std::string, int> itemsMap = {{"car", 5},{"house", 15},{"boat", 25},{"plane", 35},{"spaceship", 45}};
 
         // This for loop will loop through the items you own. When the time is divisible by 5 and not 0 (so each 5 seconds) it will add an amount that the item generates to your wallet
-        for (int i = 0; i < items.size(); i++)
+        for (auto &item : items)
         {
-            if ((currentTime % 5) == 0 && currentTime != 0 && std::find(items.begin(), items.end(), items[i]) != items.end())
+            if ((currentTime % 5) == 0 && currentTime != 0 && std::find(items.begin(), items.end(), item) != items.end())
             {
                 // Gets the matched money per 5 seconds
-                money += itemsMap[items[i]];
-                std::cout << "You have gained £" << itemsMap[items[i]] << " from the " << items[i] << " you now have £" << money << " in your wallet\n";
+                money += itemsMap[item];
+                std::cout << "You have gained £" << itemsMap[item] << " from the " << item << " you now have £" << money << " in your wallet\n";
             }
         }
 
@@ -225,16 +225,16 @@ int main()
     {
         // Loops through the items the user has bought and prints them
         std::cout << "You have bought the following item(s):\n";
-        for (int i = 0; i < items.size(); i++)
+        for (auto item = items.begin(); item != items.end(); ++item)
         {
             // This checks if the for loop is at the correct index, items.size() counts the numbers starting at 1, so I - 1, so it is inline with the index
-            if (i < items.size() - 1)
+            if (item != items.end() - 1)
             {
-                std::cout << items[i] << ", ";
+                std::cout << *item << ", ";
             }
             else
             {
-                std::cout << items[i] << "\n";
+                std::cout << *item << "\n";
             }
         }
     }

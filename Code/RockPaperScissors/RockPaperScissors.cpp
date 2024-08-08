@@ -13,9 +13,9 @@ std::string userChoice;
 // Function to clean the users input to make it much easier to compare
 std::string stringToLower(std::string str)
 {
-    for (int i = 0; i < str.length(); i++)
+    for (auto &c : str)
     {
-        str[i] = tolower(str[i]);
+        c = tolower(c);
     }
     return str;
 }
