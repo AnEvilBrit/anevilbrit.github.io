@@ -1,4 +1,4 @@
-﻿#include <iostream> // Allows for simple input and output functions
+#include <iostream> // Allows for simple input and output functions
 #include <fstream>  // Allows for simple file controls
 #include <filesystem>   // Allows for more advanced file controls
 #include <string>   // Allows the use of strings
@@ -38,10 +38,10 @@ void buyItem() {
     // Lambda function to sort the vector of pairs by the second element of the pair
 
     // Copy items to a vector of pairs
-    std::vector<std::pair<std::string, int>> itemstobuy(prices.begin(), prices.end());
+    std::vector<std::pair<std::string, int>> itemsToBuy(prices.begin(), prices.end());
 
     // Sort the vector by price (second element of the pair)
-    std::sort(itemstobuy.begin(), itemstobuy.end(), [](const std::pair<std::string, int> &a, const std::pair<std::string, int> &b) {
+    std::sort(itemsToBuy.begin(), itemsToBuy.end(), [](const std::pair<std::string, int> &a, const std::pair<std::string, int> &b) {
         return a.second < b.second;
     });
 
@@ -49,7 +49,7 @@ void buyItem() {
 
     // Asks the user what they want to do with their money
     std::cout << "You have £" << money << " on you. Here are some options to do with it:\n";
-    for (auto &item : itemstobuy)
+    for (auto &item : itemsToBuy)
     {
         std::cout << item.first << " for £" << item.second << "\n";
     }
@@ -58,10 +58,10 @@ void buyItem() {
     std::string response;
     getline(std::cin, response);
 
-    // Converts the user's response to lowercase here so I don't have to do it every time I check the response
+    // Converts the user's response to lowercase here, so I don't have to do it every time I check the response
     response = convertStringToLower(response);
 
-    // Checks if the respose is in prices. It compares the result to an invalid end of prices as prices.find() is a bool
+    // Checks if the response is in prices. It compares the result to an invalid end of prices as prices.find() is a bool
     if (prices.find(response) == prices.end())
     {
         system("cls");
@@ -79,7 +79,7 @@ void buyItem() {
     }
     else
     {
-        // Money is subtracted from the user's wallet by settting the money variable
+        // Money is subtracted from the user's wallet by setting the money variable
         money -= prices[response];
         system("cls");
         std::cout << "You have bought a " << response << " for £" << prices[response] << ". You now have £" << money << " left in your wallet\n";
@@ -117,7 +117,7 @@ void buyItem() {
     }
 }
 
-// Function to update the money you have basicly an idle game.
+// Function to update the money you have basically an idle game.
 void updateMoney(){
     //This updates every second to see which item will add money.
     std::cout << "You will make money every 5 seconds, the money varies on what item you buy\n";
@@ -126,16 +126,16 @@ void updateMoney(){
     while (true)
     {
         // A map for the items and how much they pay each 5 seconds
-        std::map<std::string, int> itemsmap = {{"car", 5},{"house", 15},{"boat", 25},{"plane", 35},{"spaceship", 45}};
+        std::map<std::string, int> itemsMap = {{"car", 5},{"house", 15},{"boat", 25},{"plane", 35},{"spaceship", 45}};
 
-        // This for loop will loop through the items you own. When the time is divisible by 5 and not 0 (so each 5 seconds) it will add an ammount that the item generates to your wallet
+        // This for loop will loop through the items you own. When the time is divisible by 5 and not 0 (so each 5 seconds) it will add an amount that the item generates to your wallet
         for (int i = 0; i < items.size(); i++)
         {
             if ((currentTime % 5) == 0 && currentTime != 0 && std::find(items.begin(), items.end(), items[i]) != items.end())
             {
                 // Gets the matched money per 5 seconds
-                money += itemsmap[items[i]];
-                std::cout << "You have gained £" << itemsmap[items[i]] << " from the " << items[i] << " you now have £" << money << " in your wallet\n";
+                money += itemsMap[items[i]];
+                std::cout << "You have gained £" << itemsMap[items[i]] << " from the " << items[i] << " you now have £" << money << " in your wallet\n";
             }
         }
 
@@ -153,20 +153,19 @@ void updateMoney(){
 
 void highscore()
 {
-    // Uses filesystem to see if a score exists is so it will show the user
-    bool isFileThere = std::filesystem::exists(highscorefile);
-    if (isFileThere)
+    // Uses filesystem to see if a score exists is, so it will show the user
+    if (std::filesystem::exists(highscorefile))
     {
-        // Gets the score from the file, and then shows it to the user. If there is no score it will tell the user the highscore does not exist
+        // Gets the score from the file, and then shows it to the user. If there is no score it will tell the user the high score does not exist
         std::ifstream ReadHighscore(highscorefile);
         std::string score;
         getline(ReadHighscore, score);
-        std::cout << "Your highscore is £" << score << "\n";
+        std::cout << "Your high score is £" << score << "\n";
         ReadHighscore.close();
     }
     else
     {
-        std::cout << "Highscore does not exist\n";
+        std::cout << "High score does not exist\n";
     }
     system("pause");
     system("cls");
@@ -179,16 +178,16 @@ int main()
     SetConsoleOutputCP(CP_UTF8);
     SetConsoleCP(CP_UTF8);
 
-    int responseint;
+    int responseInt = 0;
     // Loops the shop until the user gives a valid response
-    while (responseint != 4)
+    while (responseInt != 4)
     {
-        // Prints the options for the user
-        std::cout << "Welcome to the shop\n1. Buy an item\n2. Make Money\n3. Highscore\n4. Exit\n";
+        // Prints the shop menu
+        std::cout << "Welcome to the shop\n1. Buy an item\n2. Make Money\n3. High score\n4. Exit\n";
         std::string response;
         getline(std::cin, response);
-        responseint = std::stoi(response);
-        switch (responseint)
+        responseInt = std::stoi(response);
+        switch (responseInt)
         {
             case 1:
                 // Calls the buyItem function to send the user to buy an item
@@ -201,7 +200,7 @@ int main()
                 updateMoney();
                 break;
             case 3:
-                // Calls the highscore function to show the current highscore
+                // Calls the high score function to show the current high score
                 system("cls");
                 highscore();
                 break;
@@ -215,7 +214,7 @@ int main()
                 std::cout << "That is not a valid response\n";
         }
     }
-    // Prints a thank you message when the user exits the shop
+    // Prints a thank-you message when the user exits the shop
     std::cout << "Thank you for shopping\n";
     // Checks if the user has bought any items
     if (items.empty())
@@ -228,7 +227,7 @@ int main()
         std::cout << "You have bought the following item(s):\n";
         for (int i = 0; i < items.size(); i++)
         {
-            // This checks if the for loop is at the correct index, items.size() counts the numbers starting at 1 so I - 1 so it is inline with the index
+            // This checks if the for loop is at the correct index, items.size() counts the numbers starting at 1, so I - 1, so it is inline with the index
             if (i < items.size() - 1)
             {
                 std::cout << items[i] << ", ";
@@ -241,10 +240,9 @@ int main()
     }
 
     // Checks if the file exists
-    bool isFileThere = std::filesystem::exists(highscorefile);
-    if (isFileThere)
+    if (std::filesystem::exists(highscorefile))
     {
-        // Opens the file and reads it. Converts the string into an int so I can use operators on the score
+        // Opens the file and reads it. Converts the string into an int, so I can use operators on the score
         std::ifstream ReadHighscore(highscorefile);
         std::string score;
         getline(ReadHighscore, score);
@@ -252,16 +250,16 @@ int main()
 
         if (scoreNum > money)
         {
-            std::cout << "Your highscore for money was £" << scoreNum << " you got £" << money << " try again next time!\n";
+            std::cout << "Your high score for money was £" << scoreNum << " you got £" << money << " try again next time!\n";
         }
         // Remember "=" != "==" ffs
         else if (scoreNum == money)
         {
-            std::cout << "Your highscore for money was £" << money << " This is the same as what you gained this round. Try again next time!\n";
+            std::cout << "Your high score for money was £" << money << " This is the same as what you gained this round. Try again next time!\n";
         }
         else
         {
-            std::cout << "Your highscore for money was £" << money << " This is more than what was saved! Well done!\n";
+            std::cout << "Your high score for money was £" << money << " This is more than what was saved! Well done!\n";
             std::ofstream NewHighscore(highscorefile);
             NewHighscore << money;
             NewHighscore.close();
@@ -271,7 +269,7 @@ int main()
     }
     else
     {
-        std::cout << "Your highscore for money was £" << money << " This is more than what was saved! Well done!\n";
+        std::cout << "Your high score for money was £" << money << " This is more than what was saved! Well done!\n";
         std::ofstream NewHighscore(highscorefile);
         NewHighscore << money;
         NewHighscore.close();
